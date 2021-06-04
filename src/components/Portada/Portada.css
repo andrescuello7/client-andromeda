@@ -1,0 +1,63 @@
+.PortadaPrincipal{
+  margin-top: 1%;
+  display: flex;
+  justify-content: center;
+  width: 60%;
+}
+.PortadaDatos {
+  background-color: #fffffff6;
+  width: 60%;
+}
+.PortadaNombre {
+  margin: 5% 3%;
+  display: block;
+  width: 100%;
+  font-weight: 900;
+  color: #3a3535;
+  font-size: 3em;
+  text-shadow: 2px 2px 4px #7b7b7b;
+}
+.PortadaEmail {
+  display: block;
+  width: 100%;
+  font-weight: 300;
+  margin: 10% 0;
+  font-size: 1em;
+  color: #3a3535;
+  text-shadow: 2px 2px 4px #7b7b7b;
+}
+.PortadaFoto{
+  border-radius: 0%;
+  height: 350px;
+  width: 350px;
+}
+@media (max-Width: 780px){
+  .PortadaPrincipal{
+    margin-top: 0%;
+    display: flex;
+    align-items: center;
+    flex-direction: column-reverse;
+    width: 100%;
+    padding: 4%;
+    background: rgba(221, 216, 216, 0);
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .PortadaDatos {
+    border-radius: 5px;
+    width: 100%;
+  }
+  .PortadaFoto{
+    border-radius: 50%;
+    height: 150px;
+    width: 150px;
+  }
+  .PortadaNombre {
+    margin: 5% 0%;
+    font-size: 2em;
+  }
+  .PortadaEmail {
+    font-size: 1em;
+    margin: 8% 0;
+  }
+}
