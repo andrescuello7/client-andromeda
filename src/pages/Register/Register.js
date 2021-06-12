@@ -26,15 +26,16 @@ const Register = () => {
 
   return (
     <div className="FondoDeForm">
-      <div className="w-100">
-        <h1 className="text-center PortadaTituloForm">
-          <b>
-            <i>Registrate</i>
-          </b>
-        </h1>
-      </div>
       <div className="login">
         <Form onSubmit={HandleSubmit} className="FormLogin card">
+          <div className="w-100">
+            <h1 className="text-center PortadaTituloForm">
+              <b>
+                <i>Registrate</i>
+              </b>
+            </h1>
+          </div>
+          <hr className="bg-light"/>
           <Form.Group controlId="formBasicEmail">
             <Form.Label>Nombre</Form.Label>
             <Form.Control

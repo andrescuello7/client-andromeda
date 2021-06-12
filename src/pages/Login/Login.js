@@ -26,11 +26,12 @@ const Login = () => {
 
   return (
     <div className="FondoDeForm">
-      <div className="w-100">
-        <h1 className="text-center PortadaTituloForm"><b><i>Lugar Secreto</i></b></h1>
-      </div>
       <div className="login">
         <Form onSubmit={HandleSubmit} className="FormLogin card">
+          <div className="w-100">
+            <h1 className="text-center PortadaTituloForm"><b><i>Andromeda</i></b></h1>
+          </div>
+          <hr className="bg-light"/>
           <Form.Group controlId="formBasicEmail">
             <Form.Label>Correo Electronico</Form.Label>
             <Form.Control

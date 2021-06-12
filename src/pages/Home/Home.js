@@ -3,7 +3,7 @@ import LandPage from "../../components/LandPage/LandPage";
 const Home = () => {
   return (
     <div className="bodyLandPage">
-      <div>
+      <div className="muro">
         <LandPage />
       </div>
     </div>

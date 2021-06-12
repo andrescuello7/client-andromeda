@@ -16,19 +16,13 @@ import Prueba from "./pages/Prueba/Prueba";
 
 //Componentes
 import Navbar from "./components/Navbar/Navbar";
+import Footer from "./components/Footer/Footer";
 axios.defaults.baseURL = "http://localhost:5000/api/";
 
 function App() {
-  const [screen, setScreen] = useState("Home");
   return (
     <div className="App">
-      <Navbar setScreen={setScreen} />
-      {screen === "Home" && <Home setScreen={setScreen} />}
-      {screen === "Login" && <Login setScreen={setScreen} />}
-      {screen === "Register" && <Register setScreen={setScreen} />}
-      {screen === "Perfil" && <Perfil setScreen={setScreen} />}
-      {screen === "PerfilBuscado" && <PerfilBuscado setScreen={setScreen} />}
-      {/* <Router>
+       <Router>
         <Navbar />
         <Switch>
           <Route path="/" exact>
@@ -50,8 +44,16 @@ function App() {
             <Prueba />
           </Route>
         </Switch>
-      </Router> */}
+        <Footer />
+      </Router>
     </div>
+//const [screen, setScreen] = useState("Home");
+/*<Navbar setScreen={setScreen} />
+  {screen === "Home" && <Home setScreen={setScreen} />}
+  {screen === "Login" && <Login setScreen={setScreen} />}
+  {screen === "Register" && <Register setScreen={setScreen} />}
+  {screen === "Perfil" && <Perfil setScreen={setScreen} />}
+  {screen === "PerfilBuscado" && <PerfilBuscado setScreen={setScreen} />} */
   );
 }
 

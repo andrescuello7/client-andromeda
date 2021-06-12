@@ -9,32 +9,32 @@ import "./Navbar.css";
 import UseHome from "../../UseForm/UseHome";
 import UsePerfil from "../../UseForm/UsePerfil";
 
-const NavbarPage = ({ setScreen }) => {
+const NavbarPage = () => {
   const token = localStorage.getItem("token");
   const { usuario } = UseHome();
   const { exampleImage } = UsePerfil();
   const handleLogOut = () => {
     localStorage.removeItem("token");
-    setScreen('Login')
+    window.location.href = '/login'
   };
   
   return (
     <div className="sticky-top">
       <Navbar className="NavbarTwo">
-        <Navbar.Brand onClick={() => setScreen('Home')}>
-          <b className="NavbarTitulo">Blog-Secreto</b>
+        <Navbar.Brand as={Link} to="/">
+          <b className="NavbarTitulo">Andromeda Web</b>
         </Navbar.Brand>
         <Navbar.Collapse>
           <Nav className="mr-auto"></Nav>
           {!token && (
             <div className="d-flex">
               <div className="ml-2">
-                <Button onClick={() => setScreen('Login')} variant="outline-dark">
+                <Button as={Link} to="/login" variant="outline-dark">
                   Login
                 </Button>
               </div>
               <div className="ml-2">
-                <Button onClick={() => setScreen('Register')} variant="outline-dark">
+                <Button as={Link} to="/register" variant="outline-dark">
                   Registarse
                 </Button>
               </div>
@@ -52,7 +52,7 @@ const NavbarPage = ({ setScreen }) => {
                     />
                   </Dropdown.Toggle>
                   <Dropdown.Menu className="NavbarButtonUser">
-                    <Dropdown.Item onClick={() => setScreen('Perfil')} >
+                    <Dropdown.Item as={Link} to="/perfil" >
                       Perfil
                     </Dropdown.Item>
                     <Dropdown.Item onClick={handleLogOut}>

@@ -14,15 +14,26 @@
   justify-content: left;
 }
 .bodyLandPage {
-  background: linear-gradient(rgba(168, 49, 197, 0.808), rgb(21, 22, 24));
+  background: url('./fondo-web.jpg');
+  background: rgb(21, 22, 24);
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
   color: rgb(10, 10, 10);
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.muro{
+  width: 70%;
+  background: #161b22;
+  border-right: solid 1px rgba(116, 111, 111, 0.363);
+  border-left: solid 1px rgba(116, 111, 111, 0.363);
   min-height: 100vh;
 }
 .ColorDePerfil {
-  background: linear-gradient(rgba(168, 49, 197, 0.808), rgb(21, 22, 24));
+  background: url('./fondo-web.jpg');
+  background: rgb(21, 22, 24);
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -49,12 +60,13 @@
   color: rgb(211, 199, 199);
 }
 .CardPublica {
-  border-radius: 12px;
+  border-radius: 8px;
   background-color: rgba(12, 11, 11, 0.623);
   width: 700px;
   height: 100%;
   min-height: 180px;
   padding-bottom: 2%;
+  border: solid 1px rgba(116, 111, 111, 0.363);
 }
 .NavbarBackground {
   background-color: rgba(245, 245, 247, 0.76);
@@ -72,12 +84,13 @@
   width: 40%;
   padding: 3%;
   border-radius: 2%;
+  border: solid 1px rgb(122, 116, 116);
 }
 .descripcionPublicacion {
   font-family: "Bebas Neue", cursive;
 }
 .FondoDeForm {
-  background: linear-gradient(rgba(168, 49, 197, 0.808), rgb(21, 22, 24));
+  background: linear-gradient(rgba(84, 11, 102, 0.808), rgb(21, 22, 24));
   padding: 4%;
   background-size: cover;
   background-repeat: no-repeat;
@@ -109,10 +122,14 @@
     background-attachment: fixed;
   }
   .ColorDePerfil {
-    background: linear-gradient(rgba(168, 49, 197, 0.808), rgb(21, 22, 24));
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
+  }
+  .muro{
+    width: 100%;
+    background: rgba(20, 20, 20, 0);
+    min-height: 100vh;
   }
   .landPageOrden {
     display: flex;
@@ -135,12 +152,12 @@
   }
   .CardDiv {
     position: relative;
-    margin: 3px 0%;
+    margin: 3px 2%;
     display: flex;
     justify-content: center;
   }
   .CardPublica {
-    border-radius: 0px;
+    border-radius: 6px;
     width: 700px;
     height: 100%;
     min-height: 180px;

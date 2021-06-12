@@ -16,6 +16,7 @@
   color: #3a3535;
   font-size: 3em;
   text-shadow: 2px 2px 4px #7b7b7b;
+  border-bottom: none;
 }
 .PortadaEmail {
   display: block;

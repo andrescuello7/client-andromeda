@@ -1,0 +1,135 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+footer {
+  bottom: 0px;
+  width: 100%;
+  background: #111;
+  color: azure;
+}
+.main-content {
+  display: flex;
+}
+.main-content .box {
+  flex-basis: 50%;
+  padding: 10px 20px;
+}
+.box h2 {
+  font-size: 1.125rem;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+.box .content {
+  margin: 20px 0 0 0;
+}
+.left .content p {
+  text-align: justify;
+}
+.left .content .social {
+  margin: 20px 0 0 0;
+}
+.left .content .social a {
+  padding: 0 2px;
+}
+.left .content .social a span {
+  height: 40px;
+  width: 40px;
+  background: #1a1a1a;
+  color: aliceblue;
+  line-height: 40px;
+  text-align: center;
+  font-size: 18px;
+  border-radius: 5px;
+  transition: 0.3s;
+}
+.left .content .social a span:hover {
+  background: #3498db;
+}
+.button-map {
+  font-size: 1.4375rem;
+  background: #1a1a1a;
+  height: 40px;
+  width: 40px;
+  line-height: 45px;
+  text-align: center;
+  border-radius: 50%;
+  transition: 0.3s;
+  cursor: pointer;
+  margin-top: 5px;
+}
+.button-map:hover {
+  background: #3498db;
+}
+.center .content .text {
+  font-size: 1.0625rem;
+  font-weight: 500;
+  padding-left: 10px;
+}
+.center .content .phone {
+  margin: 10px 0;
+}
+.right form .text {
+  font-size: 1.0625rem;
+  margin-bottom: 2px;
+  color: #656565;
+}
+.right form .msg {
+  margin-top: 10px;
+}
+.right form input,
+.right form textarea {
+  width: 100%;
+  font-size: 1.0625rem;
+  background: #151515;
+  padding-left: 10px;
+  border: 1px solid #222222;
+  color: aliceblue;
+}
+.right form input:focus,
+.right form textarea:focus {
+  color: aliceblue;
+  outline-color: #3498db;
+}
+.right form input {
+  height: 35px;
+}
+.right form .btn button {
+  height: 40px;
+  width: 100%;
+  border-radius: 4px;
+  border: none;
+  outline: none;
+  background: rgb(3, 99, 163);
+  font-size: 1.0625rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: 0.3s;
+  color: aliceblue;
+}
+.right form .btn button:hover {
+  background: #000;
+}
+h2 {
+  border-bottom: solid 2px #3498db;
+}
+.footer {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+.footerInterno {
+  border-top: 1px #2e2e2e2f solid;
+  margin-top: auto;
+  background: #f0efeff0;
+  padding: 1px 0%;
+  color: #443d3d;
+}
+@media (max-width: 780px) {
+  .main-content {
+    display: flex;
+    flex-direction: column;
+  }
+}
