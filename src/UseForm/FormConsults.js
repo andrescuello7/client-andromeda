@@ -9,7 +9,7 @@ const FormConsults = () => {
   //Funcion of method Post of consults
   const ConsultsOfUser = async () => {
     try {
-      await axios.post("http://localhost:5000/api/consult", dataInputConsults);
+      await axios.post("consult", dataInputConsults);
       console.log('consulta enviada');
     } catch (error) {
       console.log(error);
