@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import axios from "axios";
 import { Card, NavDropdown, Spinner, Modal, Button } from "react-bootstrap";
 import UsePostPublic from "../UseForm/UsePostPublic";
+import imagenPredeterminada from "../flyer.jpeg";
 
 const UseHome = () => {
   //UseStates de modal
@@ -94,13 +95,13 @@ const UseHome = () => {
                   alt=""
                 />
               </div>
-              <div>{date.proveedor}</div>
+              <div><b>{date.proveedor}</b></div>
             </div>
             {(date.creador === usuario._id && (
               <div>
                 <div className="m-2">
                   <Button
-                    variant="outline-light"
+                    variant="outline-secondary"
                     onClick={() => setIdentificador(date._id)}
                   >
                     <svg
@@ -125,7 +126,7 @@ const UseHome = () => {
                 <div>
                   <div className="m-2">
                     <Button
-                      variant="outline-light"
+                      variant="outline-secondary"
                       onClick={() => setIdentificador(date._id)}
                     >
                       <svg
@@ -148,13 +149,13 @@ const UseHome = () => {
               ))}
           </div>
           <div className="d-flex flex-column">
-            <div className="m-2 descripcionPublicacion">{date.titulo}</div>
-            <div className="ml-2">{date.contenido}</div>
-            {date.imagenPublicada && (
+            <div className="descripcionPublicacion">{date.titulo}</div>
+            <div className="ml-5">{date.contenido}</div>
+            {imagenPredeterminada && (
               <div className="d-flex justify-content-center">
                 <img
                   className="PublicacionFotoPublicada"
-                  src={date.imagenPublicada}
+                  src={date.imagenPublicada || imagenPredeterminada}
                   alt=""
                 />
               </div>
@@ -190,7 +191,7 @@ const UseHome = () => {
                 </div>
                 <div className="m-2">
                   <Button
-                    variant="outline-light"
+                    variant="outline-secondary"
                     onClick={() => setIdentificador(date._id)}
                   >
                     <svg
@@ -212,12 +213,12 @@ const UseHome = () => {
               </div>
               <div className="d-flex flex-column">
                 <div className="m-2 descripcionPublicacion">{date.titulo}</div>
-                <div className="ml-2">{date.contenido}</div>
-                {date.imagenPublicada && (
+                <div className="ml-5">{date.contenido}</div>
+                {imagenPredeterminada && (
                   <div className="d-flex justify-content-center">
                     <img
                       className="PublicacionFotoPublicada"
-                      src={date.imagenPublicada}
+                      src={date.imagenPublicada || imagenPredeterminada}
                       alt=""
                     />
                   </div>

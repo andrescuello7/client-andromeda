@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import axios from "axios";
 import { Card, NavDropdown, Spinner, Modal, Button } from "react-bootstrap";
 import UseHome from "./UseHome";
+import imagenPredeterminada from "../flyer.jpeg";
 
 const UseBusqueda = () => {
   //UseStates de Aplicacion
@@ -64,11 +65,11 @@ const UseBusqueda = () => {
           </div>
           <div className="d-flex flex-column">
             <div className="m-2 descripcionPublicacion">{date.titulo}</div>
-            <div className="ml-2">{date.contenido}</div>
+            <div className="ml-5">{date.contenido}</div>
             <div className="d-flex justify-content-center">
               <img
                 className="PublicacionFotoPublicada"
-                src={date.imagenPublicada}
+                src={date.imagenPublicada || imagenPredeterminada}
                 alt=""
               />
             </div>

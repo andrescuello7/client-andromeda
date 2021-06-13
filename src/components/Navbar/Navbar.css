@@ -1,8 +1,10 @@
 .NavbarTwo{
-    background-color: rgba(229, 226, 226, 0.925)
+    margin: 0%;
+    padding: 0% 2%;
+    background-color: rgba(253, 252, 252, 0)
 }
 .NavbarTitulo{
-    color: rgb(12, 12, 12);
+    color: #212222;
     font-size: 20px;
     font-family: 'Zen Dots', cursive;
 }
@@ -11,6 +13,7 @@
     left: none;
 }
 .NavbarFoto{
+    margin: 0%;
     padding: 0%;
     width: 38px;
     height: 38px;
@@ -28,5 +31,8 @@
         color: rgb(27, 26, 26);
         font-size: 1rem;
         font-family: 'Zen Dots', cursive;
+    }
+    .NavbarTwo{
+        background-color: rgba(253, 252, 252, 0.664)
     }
 }

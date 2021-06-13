@@ -15,7 +15,8 @@ const Perfil = () => {
       <div>
         <PortadaBuscada />
       </div>
-      <div>{MapDataBaseBuscado}</div>
+      <div className="w-100 d-flex flex-column-reverse mt-5">{MapDataBaseBuscado}</div>
+      <div className="mt-5"></div>
     </div>
   );
 };

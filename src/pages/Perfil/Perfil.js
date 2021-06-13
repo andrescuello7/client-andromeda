@@ -14,7 +14,8 @@ const Perfil = () => {
       <div>
         <Portada />
       </div>
-      <div className="w-100 d-flex flex-column-reverse">{MapComparatePublic}</div>
+      <div className="w-100 d-flex flex-column-reverse mt-5">{MapComparatePublic}</div>
+      <div className="mt-5"></div>
     </div>
   );
 };
