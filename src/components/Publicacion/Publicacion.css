@@ -38,8 +38,6 @@ textarea {
   border-radius: 8px;
 }
 .PublicacionFotoImg {
-  border: rgba(0, 0, 0, 0.692) solid 1px;
-  width: 150px;
   height: 150px;
 }
 @media (max-width: 780px) {

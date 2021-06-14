@@ -8,14 +8,14 @@ import axios from "axios";
 
 const Publicacion = () => {
   const {
-    onInputClick,
-    validation,
-    base64,
     HandleSubmit,
-    onChangeImg,
+    handleUpload,
     HandleChange,
     handleClose,
     handleShow,
+    validation,
+    handlePic,
+    base64,
     show,
   } = UsePostPublic();
   return (
@@ -38,15 +38,20 @@ const Publicacion = () => {
             name="contenido"
           />
         </div>
-        {validation === true && (
-          <div className="ml-2 text-danger">
-            <p>No se puede publicar, modifica los datos!</p>
+        {base64 && (
+          <div>
+            <hr className="text-secondary"/>
+            <div className="w-100 d-flex justify-content-center">
+                <div>
+                  <img className="PublicacionFotoImg" src={base64} alt="" />
+                </div>
+            </div>
           </div>
         )}
-        <div className="w-100 d-flex justify-content-center">
-          {base64 && (
-            <div>
-              <img className="PublicacionFotoImg" src={base64} alt="" />
+        <div>
+          {validation === true && (
+            <div className="ml-2 text-danger">
+              <p>No se puede publicar, modifica los datos!</p>
             </div>
           )}
         </div>
@@ -87,8 +92,7 @@ const Publicacion = () => {
                       name="img"
                       accept="image/png, image/jpeg"
                       type="file"
-                      onChange={onChangeImg}
-                      onClick={onInputClick}
+                      onChange={handlePic}
                       multiple
                     />
                   </Form.Group>
@@ -105,7 +109,7 @@ const Publicacion = () => {
           </Modal.Body>
           <Modal.Footer>
             <div className="w-100 d-flex justify-content-between">
-              <Button variant="primary" onClick={handleClose}>
+              <Button variant="primary" onClick={handleUpload}>
                 Seleccionar
               </Button>
             </div>

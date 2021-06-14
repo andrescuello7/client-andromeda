@@ -8,7 +8,7 @@ import axios from "axios";
 const Perfil = () => {
   const token = localStorage.getItem("token");
   const { usuario } = UseHome();
-  const { onChangeImg, exampleImage } = UsePerfil();
+  const { onChangeImg, exampleImage, handlePic } = UsePerfil();
 
   const [show, setShow] = useState(false);
   const handleClose = () => setShow(false);
@@ -35,7 +35,7 @@ const Perfil = () => {
     <div className="w-100 d-flex justify-content-center">
       <div className="PortadaPrincipal">
         <div className="PortadaDatos">
-          <div className="ml-5">
+          <div className="ml-5 mr-5">
             <h2 className="PortadaNombre">{usuario.usuario}</h2>
             <div className="PortadaEmail">
               <div className="d-flex">

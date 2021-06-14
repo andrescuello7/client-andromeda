@@ -69,7 +69,7 @@ const UseBusqueda = () => {
             <div className="d-flex justify-content-center">
               <img
                 className="PublicacionFotoPublicada"
-                src={date.imagenPublicada || imagenPredeterminada}
+                src={date.flyer}
                 alt=""
               />
             </div>

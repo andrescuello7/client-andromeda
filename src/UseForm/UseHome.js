@@ -151,11 +151,11 @@ const UseHome = () => {
           <div className="d-flex flex-column">
             <div className="descripcionPublicacion">{date.titulo}</div>
             <div className="ml-5">{date.contenido}</div>
-            {imagenPredeterminada && (
+            {date.flyer && (
               <div className="d-flex justify-content-center">
                 <img
                   className="PublicacionFotoPublicada"
-                  src={date.imagenPublicada || imagenPredeterminada}
+                  src={date.flyer}
                   alt=""
                 />
               </div>
@@ -214,11 +214,11 @@ const UseHome = () => {
               <div className="d-flex flex-column">
                 <div className="m-2 descripcionPublicacion">{date.titulo}</div>
                 <div className="ml-5">{date.contenido}</div>
-                {imagenPredeterminada && (
+                {date.flyer && (
                   <div className="d-flex justify-content-center">
                     <img
                       className="PublicacionFotoPublicada"
-                      src={date.imagenPublicada || imagenPredeterminada}
+                      src={date.flyer}
                       alt=""
                     />
                   </div>

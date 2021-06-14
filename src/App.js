@@ -47,13 +47,6 @@ function App() {
         <Footer />
       </Router>
     </div>
-//const [screen, setScreen] = useState("Home");
-/*<Navbar setScreen={setScreen} />
-  {screen === "Home" && <Home setScreen={setScreen} />}
-  {screen === "Login" && <Login setScreen={setScreen} />}
-  {screen === "Register" && <Register setScreen={setScreen} />}
-  {screen === "Perfil" && <Perfil setScreen={setScreen} />}
-  {screen === "PerfilBuscado" && <PerfilBuscado setScreen={setScreen} />} */
   );
 }
 
