@@ -34,9 +34,6 @@ const UseHome = () => {
       setButtonSelect(true);
     }
   };
-  useEffect(() => {
-    console.log(identificadorBusqueda);
-  }, [publicaciones]);
 
   useEffect(() => {
     Publicacion();

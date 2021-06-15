@@ -33,13 +33,15 @@ const LandPage = () => {
   return (
     <div className="body">
       <div>
-        {token &&<div className="w-100 d-flex justify-content-center">
-          <Publicacion />
-        </div>}
+        {token && (
+          <div className="w-100 d-flex justify-content-center">
+            <Publicacion />
+          </div>
+        )}
+        {!token && <div className="mt-5"></div>}
         <div className="w-100 d-flex flex-column-reverse">{MapDataBase}</div>
       </div>
-      <div className="mt-5">
-      </div>
+      <div className="mt-5"></div>
     </div>
   );
 };
