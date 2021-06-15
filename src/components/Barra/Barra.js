@@ -1,21 +1,18 @@
 import "./Barra.css";
 import { useState } from "react";
-import { Modal, Button } from "react-bootstrap";
+import { Modal, Button, Dropdown } from "react-bootstrap";
 import useBarra from "../../UseForm/UseBarra";
 import UseHome from "../../UseForm/UseHome";
+import UseSearch from "../../UseForm/UseSearch";
 
 const Barra = () => {
-  const { usuario } = UseHome();
+  const { usuario, setSearch } = UseHome();
   const {
     handleLogOut,
     handlePerfil,
-    cardSelect,
     handleRegister,
     handleLogin,
   } = useBarra();
-  const [show, setShow] = useState(false);
-  const handleClose = () => setShow(false);
-  const handleShow = () => setShow(true);
   const token = localStorage.getItem("token");
   return (
     <div>
@@ -33,20 +30,30 @@ const Barra = () => {
               </div>
             </div>
           )}
-          <div className="barraOpcion mt-5" onClick={handleShow}>
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="30"
-              height="30"
-              fill="currentColor"
-              class="bi bi-geo-alt"
-              viewBox="0 0 16 16"
-            >
-              <path d="M12.166 8.94c-.524 1.062-1.234 2.12-1.96 3.07A31.493 31.493 0 0 1 8 14.58a31.481 31.481 0 0 1-2.206-2.57c-.726-.95-1.436-2.008-1.96-3.07C3.304 7.867 3 6.862 3 6a5 5 0 0 1 10 0c0 .862-.305 1.867-.834 2.94zM8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10z" />
-              <path d="M8 8a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm0 1a3 3 0 1 0 0-6 3 3 0 0 0 0 6z" />
-            </svg>
-            <b className="barraData">Seleccionar provincia</b>
-          </div>
+          <Dropdown className="mt-5 w-80">
+            <Dropdown.Toggle className="d-flex justify-content-end w-100" variant="" id="dropdown-basic">
+              <div className="barraOpcionDropdown">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="30"
+                  height="30"
+                  fill="currentColor"
+                  class="bi bi-geo-alt"
+                  viewBox="0 0 16 16"
+                >
+                  <path d="M12.166 8.94c-.524 1.062-1.234 2.12-1.96 3.07A31.493 31.493 0 0 1 8 14.58a31.481 31.481 0 0 1-2.206-2.57c-.726-.95-1.436-2.008-1.96-3.07C3.304 7.867 3 6.862 3 6a5 5 0 0 1 10 0c0 .862-.305 1.867-.834 2.94zM8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10z" />
+                  <path d="M8 8a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm0 1a3 3 0 1 0 0-6 3 3 0 0 0 0 6z" />
+                </svg>
+                <b className="barraData">Seleccionar provincia</b>
+              </div>
+            </Dropdown.Toggle>
+
+            <Dropdown.Menu className="d-flex justify-content-end flex-column w-100">
+              <Dropdown.Item onClick={() => setSearch('4ndromeda_Free')}>Buenos Aires</Dropdown.Item>
+              <Dropdown.Item onClick={() => setSearch('Andres Cuello')}>Cordoba</Dropdown.Item>
+              <Dropdown.Item onClick={() => setSearch('Tucuman')}>Tucuman</Dropdown.Item>
+            </Dropdown.Menu>
+          </Dropdown>
           <div className="barraOpcion">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -139,24 +146,6 @@ const Barra = () => {
               <b className="barraData">Registrarse</b>
             </div>
           )}
-        </div>
-        <div>
-          <Modal show={show} onHide={handleClose}>
-            <Modal.Header closeButton>
-              <Modal.Title>Modal heading</Modal.Title>
-            </Modal.Header>
-            <Modal.Body>
-              Woohoo, you're reading this text in a modal!
-            </Modal.Body>
-            <Modal.Footer>
-              <Button variant="secondary" onClick={handleClose}>
-                Close
-              </Button>
-              <Button variant="primary" onClick={handleClose}>
-                Save Changes
-              </Button>
-            </Modal.Footer>
-          </Modal>
         </div>
       </div>
     </div>

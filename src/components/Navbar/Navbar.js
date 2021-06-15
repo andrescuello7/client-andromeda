@@ -7,16 +7,12 @@ import { useState } from "react";
 import "./Navbar.css";
 
 const NavbarPage = () => {
-  const { usuario } = UseHome();
+  const { usuario, setSearch } = UseHome();
   const { exampleImage } = UsePerfil();
   const { handleLogOut, handlePerfil } = UseBarra();
   const token = localStorage.getItem("token");
   const [butonSelect, setButtonSelect] = useState(false);
   const [cardSelect, setCardSelect] = useState("d-none");
-
-  const [show, setShow] = useState(false);
-  const handleClose = () => setShow(false);
-  const handleShow = () => setShow(true);
 
   const buttonSelectClick = () => {
     if (butonSelect === true) {
@@ -47,26 +43,26 @@ const NavbarPage = () => {
         <Navbar.Collapse>
           <Nav className="mr-auto"></Nav>
           {token && (
-              <div className="NavbarButton barraComputer">
-                <Dropdown>
-                  <Dropdown.Toggle variant="" id="dropdown-basic">
-                    <img
-                      className="NavbarFoto"
-                      src={usuario.imagen || exampleImage}
-                      alt=""
-                    />
-                  </Dropdown.Toggle>
-                  <Dropdown.Menu className="NavbarButtonUser">
-                    <Dropdown.Item as={Link} to="/perfil" >
-                      Perfil
-                    </Dropdown.Item>
-                    <Dropdown.Item onClick={handleLogOut}>
-                      Cerrar sesion
-                    </Dropdown.Item>
-                  </Dropdown.Menu>
-                </Dropdown>
-              </div>
-            )}
+            <div className="NavbarButton barraComputer">
+              <Dropdown>
+                <Dropdown.Toggle variant="" id="dropdown-basic">
+                  <img
+                    className="NavbarFoto"
+                    src={usuario.imagen || exampleImage}
+                    alt=""
+                  />
+                </Dropdown.Toggle>
+                <Dropdown.Menu className="NavbarButtonUser">
+                  <Dropdown.Item as={Link} to="/perfil">
+                    Perfil
+                  </Dropdown.Item>
+                  <Dropdown.Item onClick={handleLogOut}>
+                    Cerrar sesion
+                  </Dropdown.Item>
+                </Dropdown.Menu>
+              </Dropdown>
+            </div>
+          )}
           {!token && (
             <div className="d-flex">
               <div className="ml-2">
@@ -100,20 +96,34 @@ const NavbarPage = () => {
       </Navbar>
       <div className={cardSelect}>
         <div className="barraGeneral">
-          <div className="barraOpcion" onClick={handleShow}>
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="30"
-              height="30"
-              fill="currentColor"
-              class="bi bi-geo-alt"
-              viewBox="0 0 16 16"
+          <Dropdown className="mt-5 w-80">
+            <Dropdown.Toggle
+              className="d-flex justify-content-end w-100"
+              variant=""
+              id="dropdown-basic"
             >
-              <path d="M12.166 8.94c-.524 1.062-1.234 2.12-1.96 3.07A31.493 31.493 0 0 1 8 14.58a31.481 31.481 0 0 1-2.206-2.57c-.726-.95-1.436-2.008-1.96-3.07C3.304 7.867 3 6.862 3 6a5 5 0 0 1 10 0c0 .862-.305 1.867-.834 2.94zM8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10z" />
-              <path d="M8 8a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm0 1a3 3 0 1 0 0-6 3 3 0 0 0 0 6z" />
-            </svg>
-            <b className="barraData">Seleccionar provincia</b>
-          </div>
+              <div className="barraOpcionDropdown">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="30"
+                  height="30"
+                  fill="currentColor"
+                  class="bi bi-geo-alt"
+                  viewBox="0 0 16 16"
+                >
+                  <path d="M12.166 8.94c-.524 1.062-1.234 2.12-1.96 3.07A31.493 31.493 0 0 1 8 14.58a31.481 31.481 0 0 1-2.206-2.57c-.726-.95-1.436-2.008-1.96-3.07C3.304 7.867 3 6.862 3 6a5 5 0 0 1 10 0c0 .862-.305 1.867-.834 2.94zM8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10z" />
+                  <path d="M8 8a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm0 1a3 3 0 1 0 0-6 3 3 0 0 0 0 6z" />
+                </svg>
+                <b className="barraData">Seleccionar provincia</b>
+              </div>
+            </Dropdown.Toggle>
+
+            <Dropdown.Menu className="d-flex justify-content-end flex-column w-100">
+              <Dropdown.Item onClick={() => setSearch('Buenos Aires')}>Buenos Aires</Dropdown.Item>
+              <Dropdown.Item onClick={() => setSearch('Cordoba')}>Cordoba</Dropdown.Item>
+              <Dropdown.Item onClick={() => setSearch('Tucuman')}>Tucuman</Dropdown.Item>
+            </Dropdown.Menu>
+          </Dropdown>
           <div className="barraOpcion">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -169,24 +179,6 @@ const NavbarPage = () => {
             </svg>
             <b className="barraData">Cerrar Sesion</b>
           </div>
-        </div>
-        <div>
-          <Modal show={show} onHide={handleClose}>
-            <Modal.Header closeButton>
-              <Modal.Title>Modal heading</Modal.Title>
-            </Modal.Header>
-            <Modal.Body>
-              Woohoo, you're reading this text in a modal!
-            </Modal.Body>
-            <Modal.Footer>
-              <Button variant="secondary" onClick={handleClose}>
-                Close
-              </Button>
-              <Button variant="primary" onClick={handleClose}>
-                Save Changes
-              </Button>
-            </Modal.Footer>
-          </Modal>
         </div>
       </div>
     </div>
