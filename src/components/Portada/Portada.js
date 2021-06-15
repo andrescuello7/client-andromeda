@@ -81,9 +81,9 @@ const Perfil = () => {
                 <p className="pl-2"> {usuario.facebook}</p>
               </div>}
               <div>
-                <Button variant="primary" onClick={handleShow}>
-                  Actalizar Datos
-                </Button>
+                <button className="btn btn-outline-primary" onClick={handleShow}>
+                  <b>Editar perfil</b>
+                </button>
               </div>
             </div>
           </div>

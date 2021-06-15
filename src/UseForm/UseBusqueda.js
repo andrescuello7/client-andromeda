@@ -60,7 +60,7 @@ const UseBusqueda = () => {
                   alt=""
                 />
               </div>
-              <div>{date.proveedor}</div>
+              <div><b>{date.proveedor}</b></div>
             </div>
           </div>
           <div className="d-flex flex-column">
