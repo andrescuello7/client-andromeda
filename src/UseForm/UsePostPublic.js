@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { getBase644, beforeUpload4 } from "../utils/index";
+import { getBase644 } from "../utils/index";
 import UseHome from "../UseForm/UseHome";
 import axios from "axios";
 
@@ -66,6 +66,7 @@ const UsePostPublic = () => {
       console.log(input)
       const headers = { "x-auth-token": token };
       await axios.post("publicacion", input, { headers });
+      //window.location.href = "/";
       setPublicacionActual(true);
     } catch (error) {
       console.log(error);
@@ -76,15 +77,6 @@ const UsePostPublic = () => {
   const onInputClick = (event) => {
     event.target.value = "";
   };
-
-  //Codigo para foto base 64
-  /*const onChangeImg = async (e) => {
-    const img = e.target.files[0];
-    const base64img = await getBase644(img);
-    const changedInput = { ...input, imagenPublicada: base64img };
-    setBase64(base64img);
-    setInput(changedInput);
-  };*/
 
   return {
     publicacionActual,

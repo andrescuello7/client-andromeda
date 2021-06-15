@@ -90,4 +90,12 @@ textarea {
     border-radius: 6px;
     width: 700px;
   }
+  .SelectCard{
+    margin-top: 14%;
+    margin-right: 10%;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    position: absolute;
+  }
 }

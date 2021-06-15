@@ -1,8 +1,6 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
-import { Card, NavDropdown, Spinner, Modal, Button } from "react-bootstrap";
-import UseHome from "./UseHome";
-import imagenPredeterminada from "../flyer.jpeg";
+import { Card, Spinner } from "react-bootstrap";
 
 const UseBusqueda = () => {
   //UseStates de Aplicacion
@@ -60,19 +58,23 @@ const UseBusqueda = () => {
                   alt=""
                 />
               </div>
-              <div><b>{date.proveedor}</b></div>
+              <div>
+                <b>{date.proveedor}</b>
+              </div>
             </div>
           </div>
           <div className="d-flex flex-column">
-            <div className="m-2 descripcionPublicacion">{date.titulo}</div>
-            <div className="ml-5">{date.contenido}</div>
-            <div className="mt-2 d-flex justify-content-center">
-              <img
-                className="PublicacionFotoPublicada"
-                src={date.flyer}
-                alt=""
-              />
-            </div>
+            <div className="m-2 descripcionTitulo">{date.titulo}</div>
+            <div className="ml-5 descripcionPublicacion">{date.contenido}</div>
+            {date.flyer && (
+              <div className="mt-2 d-flex justify-content-center">
+                <img
+                  className="PublicacionFotoPublicada"
+                  src={date.flyer}
+                  alt=""
+                />
+              </div>
+            )}
           </div>
         </Card>
       </div>
