@@ -99,7 +99,7 @@ const UseHome = () => {
     publicaciones.map((date, i) => (
       <div className="CardDiv" key={i}>
         <Card className="CardPublica">
-          <div className="d-flex justify-content-between">
+          <div className="CardPublicacion">
             <div
               className="datosTitular"
               onClick={() => setIdentBusqueda(date.creador)}
@@ -221,7 +221,7 @@ const UseHome = () => {
               </div>
             </div>
           )}
-          <div className="d-flex flex-column">
+          <div className="mt-2 d-flex flex-column">
             <div className="descripcionTitulo">{date.titulo}</div>
             <div className="descripcionPublicacion">{date.contenido}</div>
             {date.flyer && (
@@ -251,7 +251,7 @@ const UseHome = () => {
         {date.creador === usuario._id && (
           <div className="CardDiv" key={i}>
             <Card className="CardPublica">
-              <div className="d-flex justify-content-between">
+              <div className="CardPublicacion">
                 <div className="datosTitular">
                   <div>
                     <img
@@ -369,7 +369,7 @@ const UseHome = () => {
                   </div>
                 )}
               </div>
-              <div className="d-flex flex-column">
+              <div className="mt-2 d-flex flex-column">
                 <div className="descripcionTitulo">{date.titulo}</div>
                 <div className="descripcionPublicacion">{date.contenido}</div>
                 {date.flyer && (

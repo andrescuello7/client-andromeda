@@ -51,7 +51,7 @@ const UseBusqueda = () => {
     publicacionesBusqueda.map((date, i) => (
       <div className="CardDiv" key={i}>
         <Card className="CardPublica">
-          <div className="d-flex justify-content-between">
+          <div className="CardPublicacion">
             <div className="datosTitular">
               <div>
                 <img
@@ -66,7 +66,7 @@ const UseBusqueda = () => {
           <div className="d-flex flex-column">
             <div className="m-2 descripcionPublicacion">{date.titulo}</div>
             <div className="ml-5">{date.contenido}</div>
-            <div className="d-flex justify-content-center">
+            <div className="mt-2 d-flex justify-content-center">
               <img
                 className="PublicacionFotoPublicada"
                 src={date.flyer}
