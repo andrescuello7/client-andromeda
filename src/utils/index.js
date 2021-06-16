@@ -1,3 +1,6 @@
+import {library} from "@fortawesome/fontawesome-svg-core"
+import {faEye, faEyeSlash} from '@fortawesome/free-solid-svg-icons'
+
 export function getBase64(img) {
     return new Promise((resolve, reject) => {
         const reader = new FileReader();
@@ -37,3 +40,5 @@ export function beforeUpload4(file) {
     }
     return isJpgOrPng && isLt2M;
 }
+
+   library.add(faEye, faEyeSlash)
