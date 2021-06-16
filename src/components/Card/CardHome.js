@@ -67,12 +67,11 @@ const CardHome = ({ card, i }) => {
                 <b>{card.proveedor}</b>
               </div>
             </div>
-
-            <a onClick={buttonSelectClick} className="buttonSelect">
+            <div onClick={buttonSelectClick} className="buttonSelect">
               <div onClick={() => setIdentificadorBusqueda(card._id)}>
                 <b>...</b>
               </div>
-            </a>
+            </div>
           </div>
           {identificadorBusqueda === card._id && (
             <div className="SelectCard">
@@ -173,8 +172,7 @@ const CardHome = ({ card, i }) => {
               </div>
             </div>
           )}
-          <div className="mt-2 d-flex flex-column">
-            <div className="descripcionTitulo">{card.titulo}</div>
+          <div className="d-flex flex-column">
             <div className="descripcionPublicacion">{card.contenido}</div>
             {card.flyer && (
               <div className="d-flex justify-content-center">

@@ -3,6 +3,7 @@ import axios from "axios";
 import { Spinner } from "react-bootstrap";
 import CardPerfil from "../components/Card/CardPerfil";
 import CardHome from "../components/Card/CardHome";
+import Prueba from "../pages/Prueba/Prueba";
 
 const UseHome = () => {
   //UseStates de modal

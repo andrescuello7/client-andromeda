@@ -1,6 +1,6 @@
 .barraGeneral {
-  margin-top: 5%;
-  width: 320px;
+  margin-top: 2%;
+  width: 300px;
   height: 450px;
   background-color: rgba(255, 254, 255, 0);
   border-radius: 6px;
@@ -58,15 +58,17 @@
   display: block;
 }
 .barraFoto {
+  margin-top: 42px;
   width: 120px;
   height: 120px;
   border-radius: 30px;
 }
 @media (max-width: 780px) {
   .barraGeneral {
+    width: 320px;
     background-color: rgb(255, 254, 255);
     margin-top: 20%;
-    margin-left: 5%;
+    margin-left: 6%;
     border: solid 2px rgba(0, 0, 0, 0.856);
   }
   .barraButton {
