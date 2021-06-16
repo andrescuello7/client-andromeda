@@ -23,31 +23,31 @@
   display: flex;
   justify-content: center;
 }
-.barra{
+.barra {
   width: 24%;
   text-align: center;
 }
-.anuncios{
+.anuncios {
   width: 23%;
   text-align: center;
 }
-.perfilAnuncios{
+.perfilAnuncios {
   width: 15%;
   text-align: center;
 }
-.muro{
+.muro {
   width: 50%;
   border-right: solid 1px rgba(116, 111, 111, 0.158);
   border-left: solid 1px rgba(116, 111, 111, 0.212);
   min-height: 100vh;
 }
-.perfil{
+.perfil {
   border-left: solid 1px rgba(116, 111, 111, 0.212);
   min-height: 100vh;
 }
 .ColorDePerfil {
   width: 59%;
-  background: url('./fondo-web.jpg');
+  background: url("./fondo-web.jpg");
   background: rgba(255, 255, 255, 0.767);
   background-size: cover;
   background-repeat: no-repeat;
@@ -74,7 +74,7 @@
   justify-content: center;
   color: rgba(48, 45, 45, 0.849);
 }
-.CardPublicacion{
+.CardPublicacion {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -90,45 +90,74 @@
 .NavbarBackground {
   background-color: rgba(245, 245, 247, 0.76);
 }
+.FondoDeForm {
+  min-height: 570px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  text-shadow: 10px 10px 10px #000000;
+}
 .login {
-  margin: 4% 0px;
+  margin: 0% 0px;
   width: 100%;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
 }
 .FormLogin {
-  background: rgb(0,0,0);
-background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(58,255,223,1) 100%);
   text-shadow: 5px 5px 8px #000000;
   color: rgb(117, 116, 116);
-  width: 35%;
-  padding: 3%;
-  border-radius: 2%;
-  border: solid 1px rgba(109, 105, 105, 0.486);
+  width: 28%;
+  padding: 200px 3%;
 }
-.password-toogle-icon{
+.FormRegister {
+  text-shadow: 5px 5px 8px #000000;
+  color: rgb(117, 116, 116);
+  width: 28%;
+  padding: 100px 3%;
+}
+.password-toogle-icon {
+  margin-top: 2%;
+  margin-left: 4%;
+  color: #00000070;
   position: absolute;
-  top: 210px;
-  right: 65px;
   cursor: pointer;
 }
-.password-toogle-icon-register{
+.password-toogle-icon-register {
+  margin-top: 2%;
+  margin-left: 4%;
+  color: #00000070;
   position: absolute;
-  top: 274px;
-  right: 65px;
   cursor: pointer;
 }
-.select-style{
-  margin-left: 26px;
-  width:50%;
-  /* top: 274px;
-  right: 65px; */
+.select-style {
+  margin-left: 0px;
+  width: 100%;
 }
-.About{
-  width: 50%;
+.About {
+  background: url(http://cdn.shopify.com/s/files/1/1801/1563/articles/Portada_Blog_fotografia_urbana.jpg?v=1532458593);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: local;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  width: 72%;
 }
-.ListaAbout{
-  list-style:none;
+.AboutImgen {
+  min-height: 100%;
+  background: #2e2d2da2;
+  padding: 6%;
+}
+.AboutText {
+  width: 70%;
+  text-shadow: 2px 4px 8px #000000;
+  color: #dad2d2;
+}
+.AboutTitulo {
+  font-family: "Zen Dots";
+}
+.ListaAbout {
+  list-style: none;
 }
 .descripcionTitulo {
   text-align: center;
@@ -138,21 +167,15 @@ background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(58,255,223,1) 100%);
 .descripcionPublicacion {
   color: #212324b4;
   font-size: 16px;
-  font-family: 'Open Sans';
+  font-family: "Open Sans";
   margin-left: 5%;
   margin-top: 1%;
   margin-bottom: 1%;
 }
-.FondoDeForm {
-  padding: 4%;
-  background-size: cover;
-  background-repeat: no-repeat;
-  text-shadow: 10px 10px 10px #000000;
-}
 .PortadaTituloForm {
   display: block;
   width: 100%;
-  color: #fffdfd;
+  color: #464141;
   text-shadow: 2px 2px 10px #2b2929;
 }
 .marginPublicacion {
@@ -165,10 +188,6 @@ background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(58,255,223,1) 100%);
   align-items: center;
 }
 @media (max-width: 780px) {
-  .FondoDeForm {
-    padding-top: 10%;
-    min-height: 100vh;
-  }
   .bodyLandPage {
     background-size: cover;
     background-repeat: no-repeat;
@@ -179,10 +198,20 @@ background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(58,255,223,1) 100%);
     background-repeat: no-repeat;
     background-attachment: fixed;
   }
-  .muro{
+  .barra {
+    width: 0%;
+    text-align: center;
+  }
+  .muro {
     width: 100%;
     background: rgba(20, 20, 20, 0);
+    border-right: solid 1px rgba(116, 111, 111, 0);
+    border-left: solid 1px rgba(116, 111, 111, 0);
     min-height: 100vh;
+  }
+  .anuncios {
+    width: 0%;
+    text-align: center;
   }
   .descripcionPublicacion {
     margin-top: 2%;
@@ -216,7 +245,7 @@ background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(58,255,223,1) 100%);
   }
   .CardPublica {
     border-radius: 6px;
-    width: 700px;
+    width: 100%;
     height: 100%;
     min-height: 180px;
     padding: 2% 0%;
@@ -224,24 +253,66 @@ background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(58,255,223,1) 100%);
   .footerDateResponsive {
     display: none;
   }
+  .FondoDeForm {
+    padding-top: 0%;
+    min-height: 100vh;
+  }
   .login {
-    margin: 15% 0px;
     width: 100%;
     display: flex;
     justify-content: center;
+    flex-direction: column;
   }
   .FormLogin {
-    width: 95%;
-    padding: 5%;
-    border-radius: 2%;
+    min-height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 160px 3%;
+  }
+  .FormRegister {
+    min-height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 110px 3%;
   }
   .PuclicarEmail {
     width: 90%;
   }
-  .muro{
+  .About {
+    margin-top: 0%;
+    width: 90%;
+    display: flex;
+    align-self: center;
+    flex-direction: column;
+  }
+  .About {
+    background: url(http://cdn.shopify.com/s/files/1/1801/1563/articles/Portada_Blog_fotografia_urbana.jpg?v=1532458593);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: local;
+    margin-top: 0%;
     width: 100%;
-    border-right: solid 1px rgba(116, 111, 111, 0);
-    border-left: solid 1px rgba(116, 111, 111, 0);
-    min-height: 100vh;
+    display: flex;
+    align-self: center;
+    flex-direction: column;
+  }
+  .AboutImgen {
+    min-height: 100%;
+    background: #2e2d2da2;
+    padding: 4% 2%;
+    display: flex;
+    justify-content: center;
+  }
+  .AboutText {
+    width: 70%;
+    text-shadow: 2px 4px 8px #000000;
+    color: #dad2d2;
+  }
+  .AboutTitulo {
+    font-family: "Zen Dots";
   }
 }

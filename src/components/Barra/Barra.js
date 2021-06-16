@@ -7,12 +7,8 @@ import UseSearch from "../../UseForm/UseSearch";
 
 const Barra = () => {
   const { usuario, setSearch } = UseHome();
-  const {
-    handleLogOut,
-    handlePerfil,
-    handleRegister,
-    handleLogin,
-  } = useBarra();
+  const { handleLogOut, handlePerfil, handleRegister, handleLogin } =
+    useBarra();
   const token = localStorage.getItem("token");
   return (
     <div>
@@ -31,7 +27,11 @@ const Barra = () => {
             </div>
           )}
           <Dropdown className="mt-5 w-80">
-            <Dropdown.Toggle className="d-flex justify-content-end w-100" variant="" id="dropdown-basic">
+            <Dropdown.Toggle
+              className="d-flex justify-content-end w-100"
+              variant=""
+              id="dropdown-basic"
+            >
               <div className="barraOpcionDropdown">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -49,9 +49,15 @@ const Barra = () => {
             </Dropdown.Toggle>
 
             <Dropdown.Menu className="d-flex justify-content-end flex-column w-100">
-              <Dropdown.Item onClick={() => setSearch('4ndromeda_Free')}>Buenos Aires</Dropdown.Item>
-              <Dropdown.Item onClick={() => setSearch('Andres Cuello')}>Cordoba</Dropdown.Item>
-              <Dropdown.Item onClick={() => setSearch('Tucuman')}>Tucuman</Dropdown.Item>
+              <Dropdown.Item onClick={() => setSearch("4ndromeda_Free")}>
+                Buenos Aires
+              </Dropdown.Item>
+              <Dropdown.Item onClick={() => setSearch("Andres Cuello")}>
+                Cordoba
+              </Dropdown.Item>
+              <Dropdown.Item onClick={() => setSearch("Tucuman")}>
+                Tucuman
+              </Dropdown.Item>
             </Dropdown.Menu>
           </Dropdown>
           <div className="barraOpcion">
