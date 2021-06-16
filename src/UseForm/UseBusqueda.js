@@ -64,8 +64,7 @@ const UseBusqueda = () => {
             </div>
           </div>
           <div className="d-flex flex-column">
-            <div className="m-2 descripcionTitulo">{date.titulo}</div>
-            <div className="ml-5 descripcionPublicacion">{date.contenido}</div>
+            <div className="descripcionPublicacion">{date.contenido}</div>
             {date.flyer && (
               <div className="mt-2 d-flex justify-content-center">
                 <img

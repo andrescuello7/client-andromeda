@@ -1,6 +1,6 @@
 .barraGeneral {
-  margin-top: 5%;
-  width: 320px;
+  margin-top: 2%;
+  width: 300px;
   height: 450px;
   background-color: rgba(255, 254, 255, 0);
   border-radius: 6px;
@@ -14,82 +14,92 @@
   display: flex;
   justify-content: center;
   color: rgba(7, 7, 7, 0.945);
-  margin: 2% 10% ;
+  margin: 2% 10%;
   padding-left: 10%;
   width: 80%;
   height: 40px;
   font-size: 18px;
   border-radius: 6px;
 }
-.barraOpcion:hover{
-    background: rgba(34, 36, 37, 0.13);
-    color: rgb(0, 0, 0);
+.barraOpcion:hover {
+  background: rgba(34, 36, 37, 0.13);
+  color: rgb(0, 0, 0);
 }
-.barraData{
-    display: flex;
-    justify-content: end;
-    width: 90%;
-    margin-left: 4%;
-    font-family: 'Open Sans', sans-serif;
+.barraOpcionDropdown {
+  margin-top: 2%;
+  width: 78%;
+  display: flex;
+  justify-content: space-evenly;
+  color: rgba(7, 7, 7, 0.945);
+  font-size: 18px;
 }
-.barraButton{
-    margin-top: 1%;
+.barraData {
+  display: flex;
+  justify-content: end;
+  width: 90%;
+  margin-left: 4%;
+  font-family: "Open Sans", sans-serif;
+}
+.barraButton {
+  margin-top: 1%;
+  width: 50px;
+  height: 45px;
+  position: fixed;
+}
+.barraButton:hover {
+  border-radius: 6px;
+  background: rgba(34, 36, 37, 0.24);
+  color: rgb(0, 0, 0);
+}
+.barraPhone {
+  display: none;
+}
+.barraComputer {
+  display: block;
+}
+.barraFoto {
+  margin-top: 42px;
+  width: 120px;
+  height: 120px;
+  border-radius: 30px;
+}
+@media (max-width: 780px) {
+  .barraGeneral {
+    width: 320px;
+    background-color: rgb(255, 254, 255);
+    margin-top: 20%;
+    margin-left: 6%;
+    border: solid 2px rgba(0, 0, 0, 0.856);
+  }
+  .barraButton {
+    margin: 3%;
     width: 50px;
     height: 45px;
     position: fixed;
-}
-.barraButton:hover{
+    background: rgb(255, 255, 255);
+    border: solid 1px rgba(0, 0, 0, 0.856);
     border-radius: 6px;
-    background: rgba(34, 36, 37, 0.24);
+  }
+  .barraButton:hover {
+    border-radius: 6px;
+    background: rgb(255, 255, 255);
     color: rgb(0, 0, 0);
-}
-.barraPhone{
-    display: none;
-}
-.barraComputer{
+  }
+  .barraOpcion {
+    display: flex;
+    justify-content: center;
+    color: rgba(7, 7, 7, 0.945);
+    margin: 2% 10%;
+    padding-left: 10%;
+    width: 80%;
+    height: 40px;
+    font-size: 18px;
+    border-radius: 6px;
+  }
+  .barraPhone {
     display: block;
-}
-.barraFoto{
-    width: 120px;
-    height: 120px;
-    border-radius: 30px;
-}
-@media (max-width: 780px) {
-    .barraGeneral {
-        background-color: rgb(255, 254, 255);
-        margin-top: 20%;
-        margin-left: 5%;
-        border: solid 2px rgba(0, 0, 0, 0.856);
-    }
-    .barraButton{
-        margin: 3%;
-        width: 50px;
-        height: 45px;
-        position: fixed;
-        background: rgb(255, 255, 255);
-        border: solid 1px rgba(0, 0, 0, 0.856);
-        border-radius: 6px;
-    }
-    .barraButton:hover{
-        border-radius: 6px;
-        background: rgb(255, 255, 255);
-        color: rgb(0, 0, 0);
-    }
-    .barraOpcion {
-        display: flex;
-        justify-content: center;
-        color: rgba(7, 7, 7, 0.945);
-        margin: 2% 10% ;
-        padding-left: 10%;
-        width: 80%;
-        height: 40px;
-        font-size: 18px;
-        border-radius: 6px;
-      }
-    .barraPhone{
-        display: block;
-    }
-    .barraComputer{
-        display: none;
-    }
+  }
+  .barraComputer {
+    display: none;
+  }
 }

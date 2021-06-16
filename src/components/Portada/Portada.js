@@ -35,7 +35,7 @@ const Perfil = () => {
     <div className="w-100 d-flex justify-content-center">
       <div className="PortadaPrincipal">
         <div className="PortadaDatos">
-          <div className="ml-5 mr-5">
+          <div className="ml-2 mr-5">
             <h2 className="PortadaNombre">{usuario.usuario}</h2>
             <div className="PortadaEmail">
               <div className="d-flex">

@@ -151,8 +151,7 @@ const CardPerfil = ({ card, i }) => {
                   </div>
                 </div>
               )}
-            <div className="mt-2 d-flex flex-column">
-              <div className="descripcionTitulo">{card.titulo}</div>
+            <div className="d-flex flex-column">
               <div className="descripcionPublicacion">{card.contenido}</div>
               {card.flyer && (
                 <div className="d-flex justify-content-center">

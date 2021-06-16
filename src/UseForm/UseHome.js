@@ -3,11 +3,11 @@ import axios from "axios";
 import { Spinner } from "react-bootstrap";
 import CardPerfil from "../components/Card/CardPerfil";
 import CardHome from "../components/Card/CardHome";
+import Prueba from "../pages/Prueba/Prueba";
 
 const UseHome = () => {
   //UseStates de modal
   const token = localStorage.getItem("token");
-  const [publicacionActual, setPublicacionActual] = useState(false);
 
   //UseStates de Aplicacion
   const [admin, setAdmin] = useState("");
@@ -19,6 +19,8 @@ const UseHome = () => {
   const [identificadorBusqueda, setIdentificadorBusqueda] = useState("");
   const [butonSelect, setButtonSelect] = useState(false);
   const [cardSelect, setCardSelect] = useState("d-none");
+  const [publicacionActual, setPublicacionActual] = useState(false);
+  const [search, setSearch] = useState();
   const exampleImage =
     "https://www.webespacio.com/wp-content/uploads/2010/12/perfil-facebook.jpg";
 
@@ -53,7 +55,6 @@ const UseHome = () => {
       setButtonSelect(true);
     }
   };
-
   //Consulta el usuario activo actualmente
   const Usuario = async () => {
     try {
@@ -96,7 +97,9 @@ const UseHome = () => {
       </div>
     )) ||
     publicaciones.map((date, i) => (
-      <CardHome card={date} key={i}/>
+      <div>
+        <CardHome card={date} key={i} />
+      </div>
     ));
 
   //Aqui hacemos el map y compara con el id del producto y es del usuario
@@ -107,7 +110,7 @@ const UseHome = () => {
         <Spinner animation="border" variant="primary" />
       </div>
     )) ||
-    publicaciones.map((date, i) => (<CardPerfil card={date} key={i}/>));
+    publicaciones.map((date, i) => <CardPerfil card={date} key={i} />);
   return {
     admin,
     setAdmin,
@@ -128,7 +131,7 @@ const UseHome = () => {
     cardSelect,
     setCardSelect,
     exampleImage,
-
+    setSearch,
     Delete,
     Usuario,
     setPublicacionActual,
@@ -136,7 +139,7 @@ const UseHome = () => {
     publicacionActual,
     Publicacion,
     MapDataBase,
-    buttonSelectClick
+    buttonSelectClick,
   };
 };
 export default UseHome;

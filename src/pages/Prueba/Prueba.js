@@ -1,18 +1,10 @@
-import { useState } from "react";
+import "./Prueba.css";
 
 const Prueba = () => {
   return (
     <div>
-      <div className="sidebar">
-      <div className="toggle-btn">
-        <span>datas</span>
+      <div className="circle">
       </div>
-      <ul>
-        <li>Home</li>
-        <li>About</li>
-        <li>Contact</li>
-      </ul>
-    </div>
     </div>
   );
 };
