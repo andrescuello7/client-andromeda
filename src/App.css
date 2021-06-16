@@ -315,4 +315,8 @@
   .AboutTitulo {
     font-family: "Zen Dots";
   }
+  .perfilAnuncios {
+    width: 0%;
+    text-align: center;
+  }
 }
