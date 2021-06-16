@@ -1,12 +1,14 @@
 import { Form, Button } from "react-bootstrap";
 import axios from "axios";
 import { useState } from "react";
+import UsePasword from "../../UseForm/UsePasword";
 
 
 const Login = () => {
   const [input, setInput] = useState({});
   const [validation, setValidation] = useState(false);
   const [modalShow, setModalShow] = useState(false);
+  const [PasswordInputType, ToogleIcon] = UsePasword()
 
   const HandleChange = (e) => {
     const { name, value } = e.target;
@@ -62,9 +64,11 @@ const Login = () => {
                 <input
                   className="form-control"
                   onChange={(e) => HandleChange(e)}
-                  type="password"
+                  type={PasswordInputType}
                   name="password"
-                  placeholder="Password" />
+                  placeholder="Password" 
+                  />
+                  <span className="password-toogle-icon">{ToogleIcon}</span>
               </div>
             </Form.Group>
             {(validation === true && (<div className="ml-2 text-danger">
