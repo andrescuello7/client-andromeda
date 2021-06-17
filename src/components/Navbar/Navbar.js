@@ -9,7 +9,8 @@ import "./Navbar.css";
 const NavbarPage = () => {
   const { usuario, setSearch, setIdentProvincia } = UseHome();
   const { exampleImage } = UsePerfil();
-  const { handleLogOut, handlePerfil } = UseBarra();
+  const { handleLogOut, handlePerfil, handleRegister, handleLogin } =
+    UseBarra();
   const token = localStorage.getItem("token");
   const [butonSelect, setButtonSelect] = useState(false);
   const [cardSelect, setCardSelect] = useState("d-none");
@@ -50,73 +51,29 @@ const NavbarPage = () => {
         </Navbar.Brand>
         <Navbar.Collapse>
           <Nav className="mr-auto"></Nav>
-          {token && (
-            <div className="NavbarButton barraComputer">
-              <Dropdown>
-                <Dropdown.Toggle variant="" id="dropdown-basic">
-                  <img
-                    className="NavbarFoto"
-                    src={usuario.imagen || exampleImage}
-                    alt=""
-                  />
-                </Dropdown.Toggle>
-                <Dropdown.Menu className="NavbarButtonUser">
-                  <Dropdown.Item as={Link} to="/perfil">
-                    Perfil
-                  </Dropdown.Item>
-                  <Dropdown.Item onClick={handleLogOut}>
-                    Cerrar sesion
-                  </Dropdown.Item>
-                </Dropdown.Menu>
-              </Dropdown>
-            </div>
-          )}
-          {!token && (
-            <div className="d-flex">
-              <div className="ml-2">
-                <Button as={Link} to="/login" variant="outline-dark">
-                  Login
-                </Button>
-              </div>
-              <div className="ml-2">
-                <Button as={Link} to="/register" variant="outline-dark">
-                  Registarse
-                </Button>
-              </div>
-            </div>
-          )}
-          {token && (
-            <div>
-              <div className="barraPhone">
-                <div onClick={buttonSelectClick}>
-                  <div>
-                    <img
-                      className="NavbarFoto"
-                      src={usuario.imagen || exampleImage}
-                      alt=""
-                    />
+          <div className="barraPhone">
+            <div onClick={buttonSelectClick}>
+              <div>
+                {usuario.imagen && (
+                  <img className="NavbarFoto" src={usuario.imagen} alt="" />
+                )}
+                {!usuario.imagen && (
+                  <div className="buttonSelect">
+                    <div>
+                      <b>...</b>
+                    </div>
                   </div>
-                </div>
+                )}
               </div>
             </div>
-          )}
+          </div>
         </Navbar.Collapse>
       </Navbar>
       <div className={cardSelect}>
-        <div className="barraGeneral">
+        <div className="barraGeneralPhone">
           <div className="barraOpcionDropdown">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="30"
-              height="30"
-              fill="currentColor"
-              class="bi bi-geo-alt"
-              viewBox="0 0 16 16"
-            >
-              <path d="M12.166 8.94c-.524 1.062-1.234 2.12-1.96 3.07A31.493 31.493 0 0 1 8 14.58a31.481 31.481 0 0 1-2.206-2.57c-.726-.95-1.436-2.008-1.96-3.07C3.304 7.867 3 6.862 3 6a5 5 0 0 1 10 0c0 .862-.305 1.867-.834 2.94zM8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10z" />
-              <path d="M8 8a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm0 1a3 3 0 1 0 0-6 3 3 0 0 0 0 6z" />
-            </svg>
             <Form.Group
+              className="m-0 p-0"
               onChange={(e) => HandleChange(e)}
               controlId="formGridState"
             >
@@ -181,33 +138,68 @@ const NavbarPage = () => {
             </svg>
             <b className="barraData">Configuraciones</b>
           </div>
-          <div className="barraOpcion" onClick={handlePerfil}>
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="30"
-              height="30"
-              fill="currentColor"
-              class="bi bi-person"
-              viewBox="0 0 16 16"
-            >
-              <path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0zm4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4zm-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10z" />
-            </svg>
-            <b className="barraData">Mi Perfil</b>
-          </div>
-          <div className="barraOpcion" onClick={handleLogOut}>
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="30"
-              height="30"
-              fill="currentColor"
-              class="bi bi-backspace"
-              viewBox="0 0 16 16"
-            >
-              <path d="M5.83 5.146a.5.5 0 0 0 0 .708L7.975 8l-2.147 2.146a.5.5 0 0 0 .707.708l2.147-2.147 2.146 2.147a.5.5 0 0 0 .707-.708L9.39 8l2.146-2.146a.5.5 0 0 0-.707-.708L8.683 7.293 6.536 5.146a.5.5 0 0 0-.707 0z" />
-              <path d="M13.683 1a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2h-7.08a2 2 0 0 1-1.519-.698L.241 8.65a1 1 0 0 1 0-1.302L5.084 1.7A2 2 0 0 1 6.603 1h7.08zm-7.08 1a1 1 0 0 0-.76.35L1 8l4.844 5.65a1 1 0 0 0 .759.35h7.08a1 1 0 0 0 1-1V3a1 1 0 0 0-1-1h-7.08z" />
-            </svg>
-            <b className="barraData">Cerrar Sesion</b>
-          </div>
+          {token && (
+            <div className="barraOpcion" onClick={handlePerfil}>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="30"
+                height="30"
+                fill="currentColor"
+                class="bi bi-person"
+                viewBox="0 0 16 16"
+              >
+                <path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0zm4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4zm-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10z" />
+              </svg>
+              <b className="barraData">Mi Perfil</b>
+            </div>
+          )}
+          {token && (
+            <div className="barraOpcion" onClick={handleLogOut}>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="30"
+                height="30"
+                fill="currentColor"
+                class="bi bi-backspace"
+                viewBox="0 0 16 16"
+              >
+                <path d="M5.83 5.146a.5.5 0 0 0 0 .708L7.975 8l-2.147 2.146a.5.5 0 0 0 .707.708l2.147-2.147 2.146 2.147a.5.5 0 0 0 .707-.708L9.39 8l2.146-2.146a.5.5 0 0 0-.707-.708L8.683 7.293 6.536 5.146a.5.5 0 0 0-.707 0z" />
+                <path d="M13.683 1a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2h-7.08a2 2 0 0 1-1.519-.698L.241 8.65a1 1 0 0 1 0-1.302L5.084 1.7A2 2 0 0 1 6.603 1h7.08zm-7.08 1a1 1 0 0 0-.76.35L1 8l4.844 5.65a1 1 0 0 0 .759.35h7.08a1 1 0 0 0 1-1V3a1 1 0 0 0-1-1h-7.08z" />
+              </svg>
+              <b className="barraData">Cerrar Sesion</b>
+            </div>
+          )}
+          {!token && (
+            <div className="barraOpcion" onClick={handleLogin}>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="30"
+                height="30"
+                fill="currentColor"
+                class="bi bi-cursor"
+                viewBox="0 0 16 16"
+              >
+                <path d="M14.082 2.182a.5.5 0 0 1 .103.557L8.528 15.467a.5.5 0 0 1-.917-.007L5.57 10.694.803 8.652a.5.5 0 0 1-.006-.916l12.728-5.657a.5.5 0 0 1 .556.103zM2.25 8.184l3.897 1.67a.5.5 0 0 1 .262.263l1.67 3.897L12.743 3.52 2.25 8.184z" />
+              </svg>
+              <b className="barraData">Iniciar Sesion</b>
+            </div>
+          )}
+          {!token && (
+            <div className="barraOpcion" onClick={handleRegister}>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="30"
+                height="30"
+                fill="currentColor"
+                class="bi bi-clipboard"
+                viewBox="0 0 16 16"
+              >
+                <path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1v-1z" />
+                <path d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5h3zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3z" />
+              </svg>
+              <b className="barraData">Registrarse</b>
+            </div>
+          )}
         </div>
       </div>
     </div>

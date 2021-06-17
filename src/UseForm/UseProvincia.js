@@ -35,7 +35,7 @@ const UseBusqueda = () => {
     publicacionesBusqueda.map((date, i) => (
       <div>
         {date.provincia === identProvincia && (
-          <div className="CardDiv" key={i}>
+          <div className="CardDiv mt-0" key={i}>
             <Card className="CardPublica">
               <div className="CardPublicacion">
                 <div className="datosTitular">

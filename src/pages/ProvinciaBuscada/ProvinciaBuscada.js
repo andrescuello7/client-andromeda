@@ -11,7 +11,7 @@ const ProvinciaBuscada = () => {
           <Barra />
         </div>
         <div className="ColorDePerfil perfil">
-          <div className="w-100 d-flex flex-column-reverse mt-5">
+          <div className="w-100 d-flex flex-column-reverse">
             {MapDataBaseBuscado}
           </div>
           <div className="mt-5"></div>
