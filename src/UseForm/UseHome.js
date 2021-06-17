@@ -7,12 +7,13 @@ import CardHome from "../components/Card/CardHome";
 const UseHome = () => {
   //UseStates de modal
   const token = localStorage.getItem("token");
+  const headers = { "x-auth-token": token };
 
   //UseStates de Aplicacion
   const exampleImage =
     "https://www.webespacio.com/wp-content/uploads/2010/12/perfil-facebook.jpg";
   const [admin, setAdmin] = useState("");
-  const [search, setSearch] = useState();
+  const [settings, setSettings] = useState(false);
   const [usuario, setUsuario] = useState([]);
   const [proveedor, setProveedor] = useState("");
   const [cardSelect, setCardSelect] = useState("d-none");
@@ -38,11 +39,12 @@ const UseHome = () => {
   //useEffects de Use Home
   useEffect(() => {
     Publicacion();
-  }, [publicaciones]);
-
+    console.log('vamos')
+  }, [settings]);
+  
   useEffect(() => {
     Usuario();
-  }, [usuario]);
+  }, []);
 
   useEffect(() => {
     if (identificador.length !== 0) {
@@ -60,21 +62,27 @@ const UseHome = () => {
       setButtonSelect(true);
     }
   };
+
   //Consulta el usuario activo actualmente
-  const Usuario = async () => {
-    const headers = { "x-auth-token": token };
-    const { data } = await axios.get("auth", {
-      headers,
-    });
-    setUsuario(data.usuario);
-    setAdmin(data.usuario.estado);
-    setProveedor(data.usuario.usuario);
+  const Usuario = async (e) => {
+    try {
+      const { data } = await axios.get("auth", {
+        headers
+      });
+      setUsuario(data.usuario);
+      setAdmin(data.usuario.estado);
+      setProveedor(data.usuario.usuario);
+    } catch (error) {
+      console.log(error);
+    }
   };
+
   //Consulta de Publicaiones
-  const Publicacion = async () => {
+  const Publicacion = async (e) => {
     try {
       const { data } = await axios.get("publicacion");
       setPublicaciones(data);
+      setSettings(false)
     } catch (error) {
       if (error) {
         console.log(error);
@@ -132,8 +140,7 @@ const UseHome = () => {
     Delete,
     Usuario,
     setAdmin,
-    setSearch,
-    setUsuario,
+    setSettings,
     Publicacion,
     setProveedor,
     setCardSelect,

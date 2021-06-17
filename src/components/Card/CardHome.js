@@ -33,15 +33,6 @@ const CardHome = ({ card, i }) => {
     window.location.href = "/buscar";
   }
 
-  //useEffects de Use Home
-  useEffect(() => {
-    Publicacion();
-  }, [identificadorBusqueda]);
-
-  useEffect(() => {
-    Usuario();
-  }, [usuario]);
-
   useEffect(() => {
     if (identificador.length !== 0) {
       Delete();
