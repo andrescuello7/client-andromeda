@@ -8,6 +8,7 @@ const Login = () => {
   const [validationSubmit, setValidationSubmit] = useState(false);
   const [validation, setValidation] = useState(false);
   const [PasswordInputType, ToogleIcon] = UsePasword();
+  const token = localStorage.getItem("token");
 
   const HandleChange = (e) => {
     const { name, value } = e.target;
@@ -31,10 +32,7 @@ const Login = () => {
     <div>
       <div className="FondoDeForm">
         <div className="login">
-          <Form
-            onSubmit={HandleSubmit}
-            className="FormLogin card"
-          >
+          <Form onSubmit={HandleSubmit} className="FormLogin card">
             <div className="w-100">
               <h1 className="text-center PortadaTituloForm">
                 <b>

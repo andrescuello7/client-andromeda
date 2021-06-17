@@ -38,7 +38,7 @@ const UseHome = () => {
   //useEffects de Use Home
   useEffect(() => {
     Publicacion();
-  }, []);
+  }, [publicaciones]);
 
   useEffect(() => {
     Usuario();
