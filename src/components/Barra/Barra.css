@@ -67,7 +67,7 @@
   .barraGeneral {
     width: 320px;
     background-color: rgb(255, 254, 255);
-    margin-top: 20%;
+    margin-top: 0%;
     margin-left: 6%;
     border: solid 2px rgba(0, 0, 0, 0.856);
   }
@@ -101,5 +101,13 @@
   }
   .barraComputer {
     display: none;
+  }
+  .barraOpcionDropdown {
+    margin-top: 0%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    color: rgba(7, 7, 7, 0.945);
+    font-size: 18px;
   }
 }

@@ -10,7 +10,7 @@ const UsePostPublic = () => {
     const handleShow = () => setShow(true);
 
   //States
-    const { proveedor, usuario, setPublicacionActual, publicacionActual, setSettings } = UseHome();
+    const { proveedor, usuario, setPublicacionActual, publicacionActual } = UseHome();
     const [validation, setValidation] = useState(false);
     const [ flyer, setFlyer] = useState("")
     const token = localStorage.getItem("token");
@@ -64,11 +64,9 @@ const UsePostPublic = () => {
   const HandleSubmit = async (e) => {
     e.preventDefault();
     try {
-      console.log(input)
       const headers = { "x-auth-token": token };
       await axios.post("publicacion", input, { headers });
       setPublicacionActual(true);
-      setSettings(true)
     } catch (error) {
       console.log(error);
       setValidation(true);

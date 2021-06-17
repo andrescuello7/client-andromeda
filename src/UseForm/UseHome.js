@@ -13,7 +13,7 @@ const UseHome = () => {
   const exampleImage =
     "https://www.webespacio.com/wp-content/uploads/2010/12/perfil-facebook.jpg";
   const [admin, setAdmin] = useState("");
-  const [settings, setSettings] = useState(false);
+  const [settings, setSettings] = useState(true);
   const [usuario, setUsuario] = useState([]);
   const [proveedor, setProveedor] = useState("");
   const [cardSelect, setCardSelect] = useState("d-none");
@@ -38,10 +38,9 @@ const UseHome = () => {
 
   //useEffects de Use Home
   useEffect(() => {
-    Publicacion();
-    console.log('vamos')
-  }, [settings]);
-  
+      Publicacion();
+  }, [publicaciones]);
+
   useEffect(() => {
     Usuario();
   }, []);
@@ -67,7 +66,7 @@ const UseHome = () => {
   const Usuario = async (e) => {
     try {
       const { data } = await axios.get("auth", {
-        headers
+        headers,
       });
       setUsuario(data.usuario);
       setAdmin(data.usuario.estado);
@@ -82,7 +81,6 @@ const UseHome = () => {
     try {
       const { data } = await axios.get("publicacion");
       setPublicaciones(data);
-      setSettings(false)
     } catch (error) {
       if (error) {
         console.log(error);
@@ -94,7 +92,6 @@ const UseHome = () => {
     try {
       const headers = { "x-auth-token": token };
       await axios.delete(`publicacion/${identificador}`, { headers });
-      //window.location.href = "/";
     } catch (error) {
       console.log("Error en eliminar datos");
     }
