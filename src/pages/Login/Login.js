@@ -1,12 +1,12 @@
 import { Form, Button } from "react-bootstrap";
 import axios from "axios";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import UsePasword from "../../UseForm/UsePasword";
 
 const Login = () => {
   const [input, setInput] = useState({});
+  const [validationSubmit, setValidationSubmit] = useState(false);
   const [validation, setValidation] = useState(false);
-  const [modalShow, setModalShow] = useState(false);
   const [PasswordInputType, ToogleIcon] = UsePasword();
 
   const HandleChange = (e) => {
@@ -31,7 +31,10 @@ const Login = () => {
     <div>
       <div className="FondoDeForm">
         <div className="login">
-          <Form onSubmit={HandleSubmit} className="FormLogin card">
+          <Form
+            onSubmit={HandleSubmit}
+            className="FormLogin card"
+          >
             <div className="w-100">
               <h1 className="text-center PortadaTituloForm">
                 <b>

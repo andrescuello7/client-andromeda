@@ -11,6 +11,7 @@ import Login from "./pages/Login/Login";
 import Register from "./pages/Register/Register";
 import Perfil from "./pages/Perfil/Perfil";
 import PerfilBuscado from "./pages/PerfilBuscado/PerfilBuscado";
+import ProvinciaBuscada from "./pages/ProvinciaBuscada/ProvinciaBuscada";
 
 import Prueba from "./pages/Prueba/Prueba";
 
@@ -40,8 +41,8 @@ function App() {
           <Route path="/buscar">
             <PerfilBuscado />
           </Route>
-          <Route path="/prueba">
-            <Prueba />
+          <Route path="/provincia">
+            <ProvinciaBuscada />
           </Route>
         </Switch>
         <Footer />

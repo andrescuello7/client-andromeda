@@ -13,7 +13,7 @@ const Register = () => {
     const changedInput = { ...input, [name]: value };
     setInput(changedInput);
   };
-
+  console.log(input);
   const HandleSubmit = async (e) => {
     e.preventDefault();
     try {
@@ -120,15 +120,17 @@ const Register = () => {
             </div>
           </Form.Group>
           <Form.Group
-            as={Col}
+            name="provincia"
+            onChange={(e) => HandleChange(e)}
             controlId="formGridState"
             className="select-style"
           >
-            <Form.Control as="select" defaultValue="Provincia">
+            <Form.Control name="provincia" as="select" defaultValue="Provincia">
               <option>Provincia</option>
               <option>Buenos Aires</option>
               <option>Catamarca</option>
               <option>Chaco</option>
+              <option>Cordoba</option>
               <option>Chubut</option>
               <option>Corrientes</option>
               <option>Entre Rios</option>
@@ -146,9 +148,7 @@ const Register = () => {
               <option>Santa Cruz</option>
               <option>Santa Fe</option>
               <option>Santiago del Estero</option>
-              <option>
-                Tierra del Fuego, Antártida e Isla del Atlántico Sur
-              </option>
+              <option>Tierra del Fuego</option>
               <option>Tucuman</option>
             </Form.Control>
           </Form.Group>

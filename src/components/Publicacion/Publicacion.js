@@ -1,5 +1,5 @@
 import "./Publicacion.css";
-import { NavDropdown, Modal, Button, Form } from "react-bootstrap";
+import { NavDropdown, Modal, Button, Form, Col } from "react-bootstrap";
 import { useState, useEffect } from "react";
 import { getBase644, beforeUpload4 } from "../../utils/index";
 import UsePostPublic from "../../UseForm/UsePostPublic";
@@ -21,15 +21,6 @@ const Publicacion = () => {
   return (
     <div className="p-2 ModalPublicacion">
       <form onSubmit={HandleSubmit}>
-        <div>
-          <input
-            onChange={(e) => HandleChange(e)}
-            placeholder="Titulo..."
-            type="text"
-            name="titulo"
-            maxLength="30"
-          />
-        </div>
         <div>
           <textarea
             onChange={(e) => HandleChange(e)}

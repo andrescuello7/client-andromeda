@@ -53,8 +53,9 @@ const UsePostPublic = () => {
     const changedInput = {
       ...input,
       [name]: value,
-      perfil: usuario.imagen,
       proveedor: proveedor,
+      perfil: usuario.imagen,
+      provincia: usuario.provincia,
     };
     setInput(changedInput);
   };
@@ -66,7 +67,6 @@ const UsePostPublic = () => {
       console.log(input)
       const headers = { "x-auth-token": token };
       await axios.post("publicacion", input, { headers });
-      //window.location.href = "/";
       setPublicacionActual(true);
     } catch (error) {
       console.log(error);

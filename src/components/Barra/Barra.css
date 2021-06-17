@@ -22,14 +22,14 @@
   border-radius: 6px;
 }
 .barraOpcion:hover {
+  border: none;
   background: rgba(34, 36, 37, 0.13);
   color: rgb(0, 0, 0);
 }
 .barraOpcionDropdown {
-  margin-top: 2%;
-  width: 78%;
+  width: 100%;
   display: flex;
-  justify-content: space-evenly;
+  justify-content: center;
   color: rgba(7, 7, 7, 0.945);
   font-size: 18px;
 }
