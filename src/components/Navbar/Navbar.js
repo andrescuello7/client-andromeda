@@ -8,6 +8,8 @@ import { NavLink, Link } from "react-router-dom";
 import "./Navbar.css";
 import UseHome from "../../UseForm/UseHome";
 import UsePerfil from "../../UseForm/UsePerfil";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faSearch } from "@fortawesome/free-solid-svg-icons";
 
 const NavbarPage = () => {
   const token = localStorage.getItem("token");
@@ -17,13 +19,20 @@ const NavbarPage = () => {
     localStorage.removeItem("token");
     window.location.href = '/login'
   };
-  
+
   return (
-    <div className="sticky-top">
+    <div className="sticky-top mt-1">
       <Navbar className="NavbarTwo">
         <Navbar.Brand as={Link} to="/">
           <b className="NavbarTitulo">Andromeda Web</b>
         </Navbar.Brand>
+
+        <div className="buscar ml-5">
+          <input type="text" placeholder="Buscar" required></input>        
+          <div className="btn-search"><FontAwesomeIcon icon={faSearch} /></div>
+
+        </div>
+
         <Navbar.Collapse>
           <Nav className="mr-auto"></Nav>
           {!token && (
