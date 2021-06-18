@@ -1,7 +1,8 @@
+import './Login.css'
 import { Form, Button } from "react-bootstrap";
+import UsePasword from "../../UseForm/UsePasword";
 import axios from "axios";
 import { useState, useEffect } from "react";
-import UsePasword from "../../UseForm/UsePasword";
 
 const Login = () => {
   const [input, setInput] = useState({});

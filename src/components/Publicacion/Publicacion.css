@@ -20,23 +20,42 @@ textarea {
   width: 96%;
   height: 50px;
 }
+.btnPublicacion{
+  color: aliceblue;
+  background-color: rgba(207, 8, 174, 0.774);
+}
+.btnPublicacion:hover{
+  color: aliceblue;
+  background-color: rgba(207, 8, 174, 0.863);
+}
+.marginPublicacion {
+  margin-top: 150px;
+}
+.datosTitular {
+  background-color: rgba(37, 36, 36, 0);
+  display: flex;
+}
 .PuclicarEmail {
   border-radius: 1rem;
   background-color: azure;
   width: 52%;
 }
+.PublicacionFotoMuro{
+  margin: 0%;
+  padding-top: 3px;
+  padding-left: 8px;
+}
 .PublicacionFoto {
-  margin-top: 3px;
-  margin-left: 8px;
   margin-right: 10px;
   width: 50px;
   height: 50px;
   border-radius: 50%;
 }
 .PublicacionFotoPublicada {
-  max-width: 90%;
+  margin-top: 2%;
+  max-width: 80%;
   max-height: 100%;
-  border-radius: 3px;
+  border-radius: 12px;
   margin-bottom: 3%;
 }
 .PublicacionFotoImg {
@@ -49,6 +68,20 @@ textarea {
   display: flex;
   justify-content: flex-end;
   position: absolute;
+}
+.descripcionPublicacion {
+  width: 490px;
+  color: #212324b4;
+  font-size: 16px;
+  font-family: "Open Sans";
+  margin-top: 1%;
+  margin-bottom: 1%;
+}
+.PortadaTituloForm {
+  display: block;
+  width: 100%;
+  color: #464141;
+  text-shadow: 2px 2px 10px #2b2929;
 }
 .buttonSelect{
   margin-right: 2%;
@@ -99,6 +132,9 @@ textarea {
     display: flex;
     justify-content: flex-end;
     position: absolute;
+  }
+  .descripcionPublicacion {
+    width: 100%;
   }
   .PublicacionFotoPublicada {
     max-width: 100%;

@@ -6,21 +6,15 @@ const Perfil = () => {
   const { MapComparatePublic } = UseHome();
 
   return (
-    <div>
-      <div className="bodyLandPage">
-        <div className="barra sticky-top">
-          <Barra />
+    <div className="w-100 d-flex justify-content-center">
+      <div className="ColorDePerfil">
+        <div>
+          <Portada />
         </div>
-        <div className="ColorDePerfil perfil">
-          <div>
-            <Portada />
-          </div>
-          <div className="w-100 d-flex flex-column-reverse mt-5">
-            {MapComparatePublic}
-          </div>
-          <div className="mt-5"></div>
+        <div className="w-100 d-flex flex-column-reverse mt-5">
+          {MapComparatePublic}
         </div>
-        <div className="perfilAnuncios"></div>
+        <div className="mt-5"></div>
       </div>
     </div>
   );

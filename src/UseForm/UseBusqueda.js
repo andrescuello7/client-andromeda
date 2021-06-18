@@ -51,20 +51,24 @@ const UseBusqueda = () => {
         <Card className="CardPublica">
           <div className="CardPublicacion">
             <div className="datosTitular">
-              <div>
+              <div
+                className="PublicacionFotoMuro"
+              >
                 <img
                   className="PublicacionFoto"
                   src={date.perfil || exampleImage}
                   alt=""
                 />
               </div>
-              <div>
-                <b>{date.proveedor}</b>
+              <div className="d-flex flex-column text-left">
+                <div>
+                  <b>{date.proveedor}</b>
+                </div>
+                <div className="descripcionPublicacion">{date.contenido}</div>
               </div>
             </div>
           </div>
           <div className="d-flex flex-column">
-            <div className="descripcionPublicacion">{date.contenido}</div>
             {date.flyer && (
               <div className="mt-2 d-flex justify-content-center">
                 <img

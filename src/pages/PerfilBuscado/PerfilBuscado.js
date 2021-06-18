@@ -12,7 +12,7 @@ const Perfil = () => {
         <div className="barra sticky-top">
           <Barra />
         </div>
-        <div className="ColorDePerfil perfil">
+        <div className="ColorDePerfilBuscado perfil">
           <div>
             <PortadaBuscada />
           </div>

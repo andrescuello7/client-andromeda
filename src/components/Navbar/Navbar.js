@@ -71,7 +71,7 @@ const NavbarPage = () => {
       </Navbar>
       <div className={cardSelect}>
         <div className="barraGeneralPhone">
-          <div className="barraOpcionDropdown">
+          <div className="">
             <Form.Group
               className="m-0 p-0"
               onChange={(e) => HandleChange(e)}
@@ -81,7 +81,7 @@ const NavbarPage = () => {
                 name="provincia"
                 as="select"
                 defaultValue="Provincia"
-                className="barraOpcion"
+                className="barraOpcionDropdown"
               >
                 <option>Provincias</option>
                 <option>Buenos Aires</option>
