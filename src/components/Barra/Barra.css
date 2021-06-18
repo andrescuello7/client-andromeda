@@ -34,7 +34,7 @@
   border-radius: 6px;
 }
 .barraOpcion:hover {
-  border-left: solid 3px rgba(207, 8, 91, 0.877);
+  border-left: solid 3px rgba(94, 17, 81, 0.774);
   background: rgba(46, 37, 48, 0.13);
   color: rgb(0, 0, 0);
 }
@@ -45,7 +45,7 @@
   color: rgba(7, 7, 7, 0.945);
 }
 .barraOpcionDropdown:hover {
-  border-left: solid 3px rgba(207, 8, 91, 0.877);
+  border-left: solid 3px rgba(94, 17, 81, 0.774);
   width: 100%;
   display: flex;
   justify-content: flex-end;
@@ -120,9 +120,9 @@
     display: flex;
     justify-content: center;
     color: rgba(7, 7, 7, 0.945);
-    margin: 2% 10%;
+    margin: 2% 0%;
     padding-left: 10%;
-    width: 80%;
+    width: 100%;
     height: 40px;
     font-size: 18px;
     border-radius: 6px;

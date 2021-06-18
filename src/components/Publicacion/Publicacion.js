@@ -48,7 +48,7 @@ const Publicacion = () => {
         </div>
         <hr />
         <div className="d-flex justify-content-between ml-2 mr-2">
-          <Button variant="outline-secondary" onClick={handleShow}>
+          <Button variant="outline-dark" onClick={handleShow}>
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="16"

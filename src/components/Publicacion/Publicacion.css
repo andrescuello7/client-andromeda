@@ -22,11 +22,11 @@ textarea {
 }
 .btnPublicacion{
   color: aliceblue;
-  background-color: rgba(207, 8, 174, 0.774);
+  background-color: rgba(94, 17, 81, 0.774);
 }
 .btnPublicacion:hover{
   color: aliceblue;
-  background-color: rgba(207, 8, 174, 0.863);
+  background-color: rgba(94, 17, 81, 0.884);
 }
 .marginPublicacion {
   margin-top: 150px;
