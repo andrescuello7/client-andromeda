@@ -2,12 +2,10 @@
     display: flex;
     justify-content: space-between;
     margin: 0%;
-    padding: 0% 2%;
-    background-color: rgba(253, 252, 252, 0)
+    padding: 6px 2%;
 }
 .NavbarTitulo{
     margin-left: 3%;
-    color: #212222;
     font-size: 20px;
     font-family: 'Zen Dots', cursive;
 }
@@ -31,13 +29,11 @@
 }
 @media (max-Width: 780px){
     .NavbarTitulo{
-        color: rgb(27, 26, 26);
         font-size: 1rem;
         font-family: 'Zen Dots', cursive;
     }
     .NavbarTwo{
         padding-top: 2%;
         padding-bottom: 2%;
-        background-color: rgb(253, 252, 252)
     }
 }

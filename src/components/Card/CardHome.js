@@ -4,6 +4,7 @@ import { Card } from "react-bootstrap";
 import UseHome from "../../UseForm/UseHome";
 
 const CardHome = ({ card, i }) => {
+  const ColorBack = localStorage.getItem("color");
   //UseStates de Aplicacion
   const {
     admin,
@@ -15,14 +16,10 @@ const CardHome = ({ card, i }) => {
     setIdentBusqueda,
     identificadorBusqueda,
     setIdentificadorBusqueda,
-    butonSelect,
-    setButtonSelect,
     cardSelect,
-    setCardSelect,
     exampleImage,
     Delete,
-    Usuario,
-    Publicacion,
+    cardOpcion,
   } = UseHome();
   //UseStates de modal
   const token = localStorage.getItem("token");
@@ -69,7 +66,7 @@ const CardHome = ({ card, i }) => {
         {identificadorBusqueda === card._id && (
           <div className="SelectCard">
             <div className={cardSelect}>
-              <div className="cardSelect">
+              <div className={cardOpcion}>
                 {(card.creador === usuario._id && (
                   <div className="option text-danger">
                     <svg

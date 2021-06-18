@@ -6,14 +6,12 @@
   width: 100%;
 }
 .PortadaDatos {
-  background-color: #fffffff6;
   width: 60%;
 }
 .PortadaNombre {
   margin: 10% 0%;
   width: 100%;
   font-weight: 900;
-  color: #3a3535;
   font-size: 30px;
   text-shadow: 2px 2px 4px #7b7b7b;
   border-bottom: none;
@@ -24,7 +22,6 @@
   font-weight: 300;
   margin: 13% 4%;
   font-size: 1em;
-  color: #3a3535;
 }
 .PortadaFoto{
   margin-top: 8%;
@@ -42,7 +39,6 @@
     flex-direction: column-reverse;
     width: 100%;
     padding: 4%;
-    background: rgba(221, 216, 216, 0);
     background-repeat: no-repeat;
     background-size: cover;
   }
