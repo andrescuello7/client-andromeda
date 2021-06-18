@@ -5,12 +5,11 @@ import PortadaBuscada from "../../components/PortadaBuscada/PortadaBuscada";
 import Barra from "../../components/Barra/Barra";
 
 const Perfil = () => {
-  const ColorBack = localStorage.getItem("color");
   const { MapDataBaseBuscado } = UseBusqueda();
-  const { colorBolean, setColorBolean, backgroud, setBackgroud } = UseHome();
+  const { usuario } = UseHome();
 
   return (
-    <div className={ColorBack}>
+    <div className={usuario.fondo === 'blanco' && "BackgroundColor1" || "BackgroundColor2"}>
       <div className="VistaPrincipal">
         <div className="barra sticky-top">
           <Barra />

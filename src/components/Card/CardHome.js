@@ -66,7 +66,7 @@ const CardHome = ({ card, i }) => {
         {identificadorBusqueda === card._id && (
           <div className="SelectCard">
             <div className={cardSelect}>
-              <div className={cardOpcion}>
+              <div className={usuario.fondo === 'blanco' && "cardSelect1" || "cardSelect2"}>
                 {(card.creador === usuario._id && (
                   <div className="option text-danger">
                     <svg

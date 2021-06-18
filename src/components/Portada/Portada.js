@@ -8,28 +8,18 @@ import axios from "axios";
 const Perfil = () => {
   const token = localStorage.getItem("token");
   const { usuario } = UseHome();
-  const { onChangeImg, exampleImage, handlePic } = UsePerfil();
-
-  const [show, setShow] = useState(false);
-  const handleClose = () => setShow(false);
-  const handleShow = () => setShow(true);
-  const [input, setInput] = useState({});
-
-  const HandleChange = (e) => {
-    const { name, value } = e.target;
-    const changedInput = { ...input, [name]: value };
-    setInput(changedInput);
-  };
-
-  const onChangeDate = async (e) => {
-    const headers = { "x-auth-token": token };
-    try {
-      await axios.put("usuario", input, { headers });
-      handleClose();
-    } catch (error) {
-      console.log(error);
-    }
-  };
+  const {
+    onChangeImg,
+    exampleImage,
+    handlePic,
+    handleClose,
+    show,
+    setShow,
+    HandleChangePerfil,
+    onChangeDate,
+    handleShow,
+    setInput,
+  } = UsePerfil();
 
   return (
     <div className="w-100 d-flex justify-content-center">
@@ -131,7 +121,7 @@ const Perfil = () => {
                     name="usuario"
                     type="text"
                     placeholder="Nuevo Usuario..."
-                    onChange={(e) => HandleChange(e)}
+                    onChange={(e) => HandleChangePerfil(e)}
                   />
                 </div>
                 <div className="d-flex">
@@ -150,7 +140,7 @@ const Perfil = () => {
                     name="facebook"
                     type="text"
                     placeholder="Cuenta Facebook..."
-                    onChange={(e) => HandleChange(e)}
+                    onChange={(e) => HandleChangePerfil(e)}
                   />
                 </div>
                 <div className="d-flex">
@@ -172,7 +162,7 @@ const Perfil = () => {
                     name="celular"
                     type="number"
                     placeholder="Numero Telefonico..."
-                    onChange={(e) => HandleChange(e)}
+                    onChange={(e) => HandleChangePerfil(e)}
                   />
                 </div>
                 <div className="d-flex">

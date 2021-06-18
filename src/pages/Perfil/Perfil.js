@@ -2,12 +2,11 @@ import UseHome from "../../UseForm/UseHome";
 import Portada from "../../components/Portada/Portada";
 
 const Perfil = () => {
-  const ColorBack = localStorage.getItem("color");
-  const { colorBolean, setColorBolean, backgroud, setBackgroud } = UseHome();
+  const { usuario } = UseHome();
   const { MapComparatePublic } = UseHome();
 
   return (
-    <div className={ColorBack}>
+    <div className={usuario.fondo === 'blanco' && "BackgroundColor1" || "BackgroundColor2"}>
       <div className="w-100 d-flex justify-content-center">
         <div className="ColorDePerfil">
           <div>

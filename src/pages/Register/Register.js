@@ -10,7 +10,7 @@ const Register = () => {
 
   const HandleChange = (e) => {
     const { name, value } = e.target;
-    const changedInput = { ...input, [name]: value };
+    const changedInput = { ...input, [name]: value, fondo: "blanco" };
     setInput(changedInput);
   };
   console.log(input);

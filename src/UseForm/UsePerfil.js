@@ -1,5 +1,6 @@
 import UseHome from "../UseForm/UseHome";
 import axios from "axios";
+import {useState} from "react";
 
 const UsePerfil = () => {
   const token = localStorage.getItem("token");
@@ -8,6 +9,25 @@ const UsePerfil = () => {
   const exampleImage =
     "https://www.webespacio.com/wp-content/uploads/2010/12/perfil-facebook.jpg";
 
+  const [show, setShow] = useState(false);
+  const handleClose = () => setShow(false);
+  const handleShow = () => setShow(true);
+  const [input, setInput] = useState({});
+
+  const HandleChangePerfil = (e) => {
+    const { name, value } = e.target;
+    const changedInput = { ...input, [name]: value };
+    setInput(changedInput);
+  };
+  const onChangeDate = async (e) => {
+    const headers = { "x-auth-token": token };
+    try {
+      await axios.put("usuario", input, { headers });
+      handleClose();
+    } catch (error) {
+      console.log(error);
+    }
+  };
   //Codigo para foto base 64
   const onChangeImg = async (e) => {
     const headers = { "x-auth-token": token };
@@ -36,6 +56,15 @@ const UsePerfil = () => {
     exampleImage,
     onChangeImg,
     token,
+    onChangeImg,
+    exampleImage,
+    show,
+    setShow,
+    HandleChangePerfil,
+    onChangeDate,
+    handleShow,
+    setInput,
+    handleClose,
   };
 };
 export default UsePerfil;

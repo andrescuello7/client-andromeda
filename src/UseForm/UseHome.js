@@ -7,11 +7,7 @@ import CardHome from "../components/Card/CardHome";
 const UseHome = () => {
   //UseStates de modal
   const token = localStorage.getItem("token");
-  const ColorBack = localStorage.getItem("color");
   const headers = { "x-auth-token": token };
-  const [backgroud, setBackgroud] = useState("BackgroundColor1");
-  const [navbar, setNavbar] = useState("barraGeneralPhone");
-  const [cardOpcion, setCardOpcion] = useState("cardSelect1");
   const [colorBolean, setColorBolean] = useState(true);
   const [settings, setSettings] = useState(true);
 
@@ -48,30 +44,13 @@ const UseHome = () => {
 
   useEffect(() => {
     Usuario();
-  }, []);
+  }, [usuario]);
 
   useEffect(() => {
     if (identificador.length !== 0) {
       Delete();
     }
   }, [identificador]);
-
-  useEffect(() => {
-    //Vista de fondo
-    console.log(ColorBack);
-    if (colorBolean === true) {
-      setBackgroud("BackgroundColor1");
-      setCardOpcion("cardSelect1");
-      setNavbar("barraGeneralPhone");
-      localStorage.setItem("color", "BackgroundColor1");
-    }
-    if (colorBolean === false) {
-      setBackgroud("BackgroundColor2");
-      setCardOpcion("cardSelect2");
-      setNavbar("barraGeneralPhone2");
-      localStorage.setItem("color", "BackgroundColor2");
-    }
-  }, [colorBolean]);
 
   //Selection de cada Card
   const buttonSelectClick = () => {
@@ -142,13 +121,10 @@ const UseHome = () => {
     )) ||
     publicaciones.map((date, i) => <CardPerfil card={date} key={i} />);
   return {
-    cardOpcion,
-    navbar,
     admin,
     usuario,
     proveedor,
     cardSelect,
-    backgroud,
     butonSelect,
     MapDataBase,
     colorBolean,
@@ -166,9 +142,6 @@ const UseHome = () => {
     setSettings,
     Publicacion,
     setProveedor,
-    setCardSelect,
-    setBackgroud,
-    setColorBolean,
     setButtonSelect,
     setPublicaciones,
     setIdentificador,

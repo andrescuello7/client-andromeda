@@ -3,10 +3,9 @@ import Barra from "../../components/Barra/Barra";
 import UseHome from "../../UseForm/UseHome";
 
 const Home = () => {
-  const ColorBack = localStorage.getItem("color");
-  const { colorBolean, setColorBolean, backgroud, setBackgroud } = UseHome();
+  const { usuario } = UseHome();
   return (
-    <div className={ColorBack}>
+    <div className={usuario.fondo === 'blanco' && "BackgroundColor1" || "BackgroundColor2"}>
       <div className="VistaPrincipal">
         <div className="barra sticky-top">
           <Barra />
