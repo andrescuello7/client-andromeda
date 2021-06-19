@@ -19,12 +19,14 @@ textarea {
   height: 50px;
 }
 .btnPublicacion{
-  color: aliceblue;
-  background-color: rgba(94, 17, 81, 0.774);
+  background-color: rgb(0, 204, 187);
 }
 .btnPublicacion:hover{
+  background-color: rgb(2, 231, 212);
+}
+.ModalPost{
+  background-color: #2b2929;
   color: aliceblue;
-  background-color: rgba(94, 17, 81, 0.884);
 }
 .marginPublicacion {
   margin-top: 150px;
@@ -75,6 +77,7 @@ textarea {
   margin-bottom: 1%;
 }
 .PortadaTituloForm {
+  color: rgb(29, 28, 28);
   display: block;
   width: 100%;
   text-shadow: 2px 2px 10px #2b2929;

@@ -23,7 +23,7 @@ axios.defaults.baseURL = "https://server-andromeda.herokuapp.com/api/";
 function App() {
   return (
     <div className="App">
-       <Router>
+      <Router>
         <Navbar />
         <Switch>
           <Route path="/" exact>
@@ -31,9 +31,11 @@ function App() {
           </Route>
           <Route path="/login">
             <Login />
+            <Footer />
           </Route>
           <Route path="/register">
             <Register />
+            <Footer />
           </Route>
           <Route path="/perfil">
             <Perfil />
@@ -45,7 +47,6 @@ function App() {
             <ProvinciaBuscada />
           </Route>
         </Switch>
-        <Footer />
       </Router>
     </div>
   );

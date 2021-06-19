@@ -12,7 +12,7 @@ const Perfil = () => {
 
   return (
     <div className="w-100 d-flex justify-content-center">
-      <div className="PortadaPrincipal">
+      <div className="PortadaPrincipalBuscado">
         <div className="PortadaDatos">
           <div className="ml-5">
             <h2 className="PortadaNombre">{usuarioBusqueda.usuario}</h2>

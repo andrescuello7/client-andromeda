@@ -22,7 +22,7 @@ const NavbarPage = () => {
 
   //useEffects de Use Home
   useEffect(() => {
-    if(input !== undefined){
+    if (input !== undefined) {
       onChangeDate();
     }
   }, [input]);
@@ -65,33 +65,32 @@ const NavbarPage = () => {
       >
         <Navbar className="NavbarTwo">
           <Navbar.Brand as={Link} to="/">
-            {usuario.fondo === "blanco" &&
-              ((
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="23"
-                  height="23"
-                  fill="currentColor"
-                  class="bi bi-signpost-2 text-light"
-                  viewBox="0 0 16 16"
-                >
-                  <path d="M7 1.414V2H2a1 1 0 0 0-1 1v2a1 1 0 0 0 1 1h5v1H2.5a1 1 0 0 0-.8.4L.725 8.7a.5.5 0 0 0 0 .6l.975 1.3a1 1 0 0 0 .8.4H7v5h2v-5h5a1 1 0 0 0 1-1V8a1 1 0 0 0-1-1H9V6h4.5a1 1 0 0 0 .8-.4l.975-1.3a.5.5 0 0 0 0-.6L14.3 2.4a1 1 0 0 0-.8-.4H9v-.586a1 1 0 0 0-2 0zM13.5 3l.75 1-.75 1H2V3h11.5zm.5 5v2H2.5l-.75-1 .75-1H14z" />
-                </svg>
-              ) || (
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="23"
-                  height="23"
-                  fill="currentColor"
-                  class="bi bi-signpost-2 text-dark"
-                  viewBox="0 0 16 16"
-                >
-                  <path d="M7 1.414V2H2a1 1 0 0 0-1 1v2a1 1 0 0 0 1 1h5v1H2.5a1 1 0 0 0-.8.4L.725 8.7a.5.5 0 0 0 0 .6l.975 1.3a1 1 0 0 0 .8.4H7v5h2v-5h5a1 1 0 0 0 1-1V8a1 1 0 0 0-1-1H9V6h4.5a1 1 0 0 0 .8-.4l.975-1.3a.5.5 0 0 0 0-.6L14.3 2.4a1 1 0 0 0-.8-.4H9v-.586a1 1 0 0 0-2 0zM13.5 3l.75 1-.75 1H2V3h11.5zm.5 5v2H2.5l-.75-1 .75-1H14z" />
-                </svg>
-              ))}
             {(usuario.fondo === "blanco" && (
-              <b className="NavbarTitulo text-light">Urban City</b>
-            )) || <b className="NavbarTitulo text-dark">Urban City</b>}
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="23"
+                height="23"
+                fill="currentColor"
+                class="bi bi-signpost-2"
+                viewBox="0 0 16 16"
+              >
+                <path d="M7 1.414V2H2a1 1 0 0 0-1 1v2a1 1 0 0 0 1 1h5v1H2.5a1 1 0 0 0-.8.4L.725 8.7a.5.5 0 0 0 0 .6l.975 1.3a1 1 0 0 0 .8.4H7v5h2v-5h5a1 1 0 0 0 1-1V8a1 1 0 0 0-1-1H9V6h4.5a1 1 0 0 0 .8-.4l.975-1.3a.5.5 0 0 0 0-.6L14.3 2.4a1 1 0 0 0-.8-.4H9v-.586a1 1 0 0 0-2 0zM13.5 3l.75 1-.75 1H2V3h11.5zm.5 5v2H2.5l-.75-1 .75-1H14z" />
+              </svg>
+            )) || (
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="23"
+                height="23"
+                fill="currentColor"
+                class="bi bi-signpost-2 text-light"
+                viewBox="0 0 16 16"
+              >
+                <path d="M7 1.414V2H2a1 1 0 0 0-1 1v2a1 1 0 0 0 1 1h5v1H2.5a1 1 0 0 0-.8.4L.725 8.7a.5.5 0 0 0 0 .6l.975 1.3a1 1 0 0 0 .8.4H7v5h2v-5h5a1 1 0 0 0 1-1V8a1 1 0 0 0-1-1H9V6h4.5a1 1 0 0 0 .8-.4l.975-1.3a.5.5 0 0 0 0-.6L14.3 2.4a1 1 0 0 0-.8-.4H9v-.586a1 1 0 0 0-2 0zM13.5 3l.75 1-.75 1H2V3h11.5zm.5 5v2H2.5l-.75-1 .75-1H14z" />
+              </svg>
+            )}
+            {(usuario.fondo === "blanco" && (
+              <b className="NavbarTitulo text-dark">Urban City</b>
+            )) || <b className="NavbarTitulo text-light">Urban City</b>}
           </Navbar.Brand>
           <Navbar.Collapse>
             <Nav className="mr-auto"></Nav>
@@ -250,39 +249,43 @@ const NavbarPage = () => {
                   <b className="barraData">Registrarse</b>
                 </div>
               )}
-              {(usuario.fondo === "blanco" && (
-                <div
-                  className="barraOpcion"
-                  onClick={() => setInput({ fondo: "negro" })}
-                >
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="30"
-                    height="30"
-                    fill="currentColor"
-                    class="bi bi-toggle-off"
-                    viewBox="0 0 16 16"
-                  >
-                    <path d="M11 4a4 4 0 0 1 0 8H8a4.992 4.992 0 0 0 2-4 4.992 4.992 0 0 0-2-4h3zm-6 8a4 4 0 1 1 0-8 4 4 0 0 1 0 8zM0 8a5 5 0 0 0 5 5h6a5 5 0 0 0 0-10H5a5 5 0 0 0-5 5z" />
-                  </svg>
-                  <b className="barraData">Tema De Fondo</b>
-                </div>
-              )) || (
-                <div
-                  className="barraOpcion"
-                  onClick={() => setInput({ fondo: "blanco" })}
-                >
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="30"
-                    height="30"
-                    fill="currentColor"
-                    class="bi bi-toggle-on"
-                    viewBox="0 0 16 16"
-                  >
-                    <path d="M5 3a5 5 0 0 0 0 10h6a5 5 0 0 0 0-10H5zm6 9a4 4 0 1 1 0-8 4 4 0 0 1 0 8z" />
-                  </svg>
-                  <b className="barraData">Tema De Fondo</b>
+              {token && (
+                <div>
+                  {(usuario.fondo === "blanco" && (
+                    <div
+                      className="barraOpcion"
+                      onClick={() => setInput({ fondo: "negro" })}
+                    >
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="30"
+                        height="30"
+                        fill="currentColor"
+                        class="bi bi-toggle-off"
+                        viewBox="0 0 16 16"
+                      >
+                        <path d="M11 4a4 4 0 0 1 0 8H8a4.992 4.992 0 0 0 2-4 4.992 4.992 0 0 0-2-4h3zm-6 8a4 4 0 1 1 0-8 4 4 0 0 1 0 8zM0 8a5 5 0 0 0 5 5h6a5 5 0 0 0 0-10H5a5 5 0 0 0-5 5z" />
+                      </svg>
+                      <b className="barraData">Tema De Fondo</b>
+                    </div>
+                  )) || (
+                    <div
+                      className="barraOpcion"
+                      onClick={() => setInput({ fondo: "blanco" })}
+                    >
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="30"
+                        height="30"
+                        fill="currentColor"
+                        class="bi bi-toggle-on"
+                        viewBox="0 0 16 16"
+                      >
+                        <path d="M5 3a5 5 0 0 0 0 10h6a5 5 0 0 0 0-10H5zm6 9a4 4 0 1 1 0-8 4 4 0 0 1 0 8z" />
+                      </svg>
+                      <b className="barraData">Tema De Fondo</b>
+                    </div>
+                  )}
                 </div>
               )}
             </div>

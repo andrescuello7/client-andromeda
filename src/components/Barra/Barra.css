@@ -45,7 +45,7 @@
   border-radius: 6px;
 }
 .barraOpcion:hover {
-  border-left: solid 3px rgba(94, 17, 81, 0.774);
+  border-left: solid 3px rgb(3, 224, 158);
   background: rgba(46, 37, 48, 0.247);
 }
 .barraOpcionDropdown {
@@ -54,7 +54,7 @@
   justify-content: flex-end;
 }
 .barraOpcionDropdown:hover {
-  border-left: solid 3px rgba(94, 17, 81, 0.774);
+  border-left: solid 3px rgb(3, 224, 158);
   width: 100%;
   display: flex;
   justify-content: flex-end;

@@ -3,11 +3,11 @@
   color: rgba(10, 10, 10, 0.87);
 }
 .BackgroundColor2{
-  background: rgb(15, 15, 15);
+  background: rgb(24, 23, 23);
   color: rgba(255, 255, 255, 0.87);
 }
 .VistaPrincipal {
-  background: rgba(194, 13, 13, 0);
+  background: rgba(68, 61, 61, 0);
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -16,13 +16,18 @@
   justify-content: center;
 }
 .ColorDePerfil {
-  width: 59%;
-  background: url("./fondo-web.jpg");
-  background: rgba(255, 255, 255, 0);
+  width: 100%;
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
-  min-height: 100vh;
+}
+.ColorDePublic {
+  width: 100%;
+  background: url("./fondo-web.jpg");
+  background: rgba(172, 25, 25, 0);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 }
 .landPageOrden {
   display: flex;
@@ -93,22 +98,23 @@
   width: 100%;
 }
 .About {
-  background: url(http://cdn.shopify.com/s/files/1/1801/1563/articles/Portada_Blog_fotografia_urbana.jpg?v=1532458593);
+  background: url(https://i.pinimg.com/originals/e8/4d/53/e84d533338bdbf86e9d61a08e3950f3b.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: local;
   text-align: center;
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
   width: 72%;
 }
 .AboutImgen {
+  padding-top: 10%;
   min-height: 100%;
-  background: #2e2d2da2;
-  padding: 6%;
+  background: #1e1d1fcc;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
 }
 .AboutText {
+  margin-top: 0%;
   width: 70%;
   text-shadow: 2px 4px 8px #000000;
   color: #dad2d2;
@@ -205,7 +211,8 @@
     justify-content: center;
   }
   .AboutText {
-    width: 70%;
+    margin-top: 5%;
+    width: 90%;
     text-shadow: 2px 4px 8px #000000;
     color: #dad2d2;
   }

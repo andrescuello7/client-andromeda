@@ -6,16 +6,22 @@ const Perfil = () => {
   const { MapComparatePublic } = UseHome();
 
   return (
-    <div className={usuario.fondo === 'blanco' && "BackgroundColor1" || "BackgroundColor2"}>
+    <div
+      className={
+        (usuario.fondo === "blanco" && "BackgroundColor1") || "BackgroundColor2"
+      }
+    >
       <div className="w-100 d-flex justify-content-center">
-        <div className="ColorDePerfil">
-          <div>
+        <div className="w-100 d-flex justify-content-center flex-column">
+          <div className="ColorDePerfil">
             <Portada />
           </div>
-          <div className="w-100 d-flex flex-column-reverse mt-5">
-            {MapComparatePublic}
+          <div className="ColorDePublic">
+            <div className="w-100 d-flex flex-column-reverse mt-5">
+              {MapComparatePublic}
+            </div>
+            <div className="mt-5"></div>
           </div>
-          <div className="mt-5"></div>
         </div>
       </div>
     </div>

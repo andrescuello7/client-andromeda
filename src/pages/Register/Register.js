@@ -160,26 +160,35 @@ const Register = () => {
           <div>
             <a href="/login">Ya me registre, iniciar sesion</a>
           </div>
-          <Button variant="primary" type="submit">
+          <Button variant="primary" className="w-100" type="submit">
             Registarse
           </Button>
         </Form>
         <div className="About">
           <div className="AboutImgen">
             <div className="AboutText">
-              <h1 className="AboutTitulo">Welcome to Cypher</h1>
-              <h5>About us</h5>
+              <h1 className="AboutTitulo text-center">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="35"
+                  height="35"
+                  fill="currentColor"
+                  class="mr-2 bi bi-signpost-2 text-light"
+                  viewBox="0 0 16 16"
+                >
+                  <path d="M7 1.414V2H2a1 1 0 0 0-1 1v2a1 1 0 0 0 1 1h5v1H2.5a1 1 0 0 0-.8.4L.725 8.7a.5.5 0 0 0 0 .6l.975 1.3a1 1 0 0 0 .8.4H7v5h2v-5h5a1 1 0 0 0 1-1V8a1 1 0 0 0-1-1H9V6h4.5a1 1 0 0 0 .8-.4l.975-1.3a.5.5 0 0 0 0-.6L14.3 2.4a1 1 0 0 0-.8-.4H9v-.586a1 1 0 0 0-2 0zM13.5 3l.75 1-.75 1H2V3h11.5zm.5 5v2H2.5l-.75-1 .75-1H14z" />
+                </svg>
+                Urban City
+              </h1>
+              <h5>Sobre nosotros</h5>
               <p>
-                It is a long established fact that a reader will be distracted
-                by the readable content of a page when looking at its layout.
-                The point of using Lorem Ipsum is that it has a more-or-less
-                normal distribution of letters, as opposed to using 'Content
-                here, content here', making it look like readable English. Many
-                desktop publishing packages and web page editors now use Lorem
-                Ipsum as their default model text, and a search for 'lorem
-                ipsum' will uncover many web sites still in their infancy.
-                Various versions have evolved over the years, sometimes by
-                accident, sometimes on purpose (injected humour and the like).
+                Esta es una web hecha con la finalidad de que las competencias
+                puedan tener alcance a todos los competidores que buscan subir
+                su nivel competitivo a traves de ellas, como los competidores
+                resuelvan el problema de busqueda de opotunidades para mejorar y
+                perticipal a nivel Regional como niven Nacional, desde ya espero
+                que sea vista a esta web como una comunidad de gente que busca
+                expandir los valores del Hip-Hop.
               </p>
             </div>
           </div>
