@@ -8,7 +8,7 @@ const Perfil = () => {
   return (
     <div
       className={
-        (usuario.fondo === "blanco" && "BackgroundColor1") || "BackgroundColor2"
+        (usuario.fondo !== 'negro' && "BackgroundColor1" || "BackgroundColor2")
       }
     >
       <div className="w-100 d-flex justify-content-center">

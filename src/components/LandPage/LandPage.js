@@ -1,34 +1,13 @@
-import { Modal, Button, NavDropdown } from "react-bootstrap";
 import UseHome from "../../UseForm/UseHome";
+import UseProvincia from "../../UseForm/UseProvincia";
 import Publicacion from "../Publicacion/Publicacion";
-import { NavLink, Link } from "react-router-dom";
-import Precentacion from "../Precentacion/Precentacion";
 import { useState } from "react";
 
 const LandPage = () => {
-  const [show, setShow] = useState(false);
-  const handleClose = () => setShow(false);
-
   //Declaracion de datos traidos de Hook Home y Token de LocalStorage
+  const { MapDataBaseBuscado } = UseProvincia();
   const { MapDataBase, usuario } = UseHome();
   const token = localStorage.getItem("token");
-
-  const BoleanBotton = () => {
-    const navigation = document.querySelector(".navigation");
-    document.querySelector(".toggle").onclick = function () {
-      this.classList.toggle("active");
-      navigation.classList.toggle("active");
-    };
-  };
-
-  const handleShow = () => {
-    setShow(true);
-  };
-
-  const handleLogOut = () => {
-    localStorage.removeItem("token");
-    window.location.href = "/login";
-  };
 
   return (
     <div className="body">

@@ -9,7 +9,7 @@ const Perfil = () => {
   const { usuario } = UseHome();
 
   return (
-    <div className={usuario.fondo === 'blanco' && "BackgroundColor1" || "BackgroundColor2"}>
+    <div className={usuario.fondo !== 'negro' && "BackgroundColor1" || "BackgroundColor2"}>
       <div className="VistaPrincipal">
         <div className="barra sticky-top">
           <Barra />

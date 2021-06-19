@@ -78,10 +78,7 @@ const Perfil = () => {
                 )}
                 <div>
                   <button
-                    className={
-                      (usuario.fondo === "blanco" && "btn btn-outline-dark") ||
-                      "btn btn-outline-light"
-                    }
+                    className="btn btn-outline-light"
                     onClick={handleShow}
                   >
                     <b>Editar perfil</b>

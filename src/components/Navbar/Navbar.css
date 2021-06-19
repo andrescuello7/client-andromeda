@@ -20,6 +20,14 @@
     height: 38px;
     border-radius: 50%;
 }
+.aMiMuro{
+    color: rgb(26, 25, 25);
+    border-bottom: none;
+}
+.aMiMuro2{
+    color: antiquewhite;
+    border-bottom: none;
+}
 .NavbarButton{
     margin: 0% 0px;
 }

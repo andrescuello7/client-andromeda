@@ -59,13 +59,13 @@ const NavbarPage = () => {
     <div className="sticky-top">
       <div
         className={
-          (usuario.fondo === "blanco" && "BackgroundColor1") ||
+          (usuario.fondo !== "negro" && "BackgroundColor1") ||
           "BackgroundColor2"
         }
       >
         <Navbar className="NavbarTwo">
           <Navbar.Brand as={Link} to="/">
-            {(usuario.fondo === "blanco" && (
+            {(usuario.fondo !== "negro" && (
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="23"
@@ -88,7 +88,7 @@ const NavbarPage = () => {
                 <path d="M7 1.414V2H2a1 1 0 0 0-1 1v2a1 1 0 0 0 1 1h5v1H2.5a1 1 0 0 0-.8.4L.725 8.7a.5.5 0 0 0 0 .6l.975 1.3a1 1 0 0 0 .8.4H7v5h2v-5h5a1 1 0 0 0 1-1V8a1 1 0 0 0-1-1H9V6h4.5a1 1 0 0 0 .8-.4l.975-1.3a.5.5 0 0 0 0-.6L14.3 2.4a1 1 0 0 0-.8-.4H9v-.586a1 1 0 0 0-2 0zM13.5 3l.75 1-.75 1H2V3h11.5zm.5 5v2H2.5l-.75-1 .75-1H14z" />
               </svg>
             )}
-            {(usuario.fondo === "blanco" && (
+            {(usuario.fondo !== "negro" && (
               <b className="NavbarTitulo text-dark">Urban City</b>
             )) || <b className="NavbarTitulo text-light">Urban City</b>}
           </Navbar.Brand>
@@ -116,7 +116,7 @@ const NavbarPage = () => {
           <div>
             <div
               className={
-                (usuario.fondo === "blanco" && "barraGeneralPhone") ||
+                (usuario.fondo !== "negro" && "barraGeneralPhone") ||
                 "barraGeneralPhone2"
               }
             >
@@ -171,7 +171,9 @@ const NavbarPage = () => {
                   <path d="M8 16.016a7.5 7.5 0 0 0 1.962-14.74A1 1 0 0 0 9 0H7a1 1 0 0 0-.962 1.276A7.5 7.5 0 0 0 8 16.016zm6.5-7.5a6.5 6.5 0 1 1-13 0 6.5 6.5 0 0 1 13 0z" />
                   <path d="m6.94 7.44 4.95-2.83-2.83 4.95-4.949 2.83 2.828-4.95z" />
                 </svg>
-                <b className="barraData">Muro del Pais</b>
+                <a className="barraData" href="/">
+                  <b className={usuario.fondo !== 'negro' && "aMiMuro" || "aMiMuro2" }>Muro del Pais</b>
+                </a>
               </div>
               <div className="barraOpcion">
                 <svg
@@ -218,40 +220,9 @@ const NavbarPage = () => {
                   <b className="barraData">Cerrar Sesion</b>
                 </div>
               )}
-              {!token && (
-                <div className="barraOpcion" onClick={handleLogin}>
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="30"
-                    height="30"
-                    fill="currentColor"
-                    class="bi bi-cursor"
-                    viewBox="0 0 16 16"
-                  >
-                    <path d="M14.082 2.182a.5.5 0 0 1 .103.557L8.528 15.467a.5.5 0 0 1-.917-.007L5.57 10.694.803 8.652a.5.5 0 0 1-.006-.916l12.728-5.657a.5.5 0 0 1 .556.103zM2.25 8.184l3.897 1.67a.5.5 0 0 1 .262.263l1.67 3.897L12.743 3.52 2.25 8.184z" />
-                  </svg>
-                  <b className="barraData">Iniciar Sesion</b>
-                </div>
-              )}
-              {!token && (
-                <div className="barraOpcion" onClick={handleRegister}>
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="30"
-                    height="30"
-                    fill="currentColor"
-                    class="bi bi-clipboard"
-                    viewBox="0 0 16 16"
-                  >
-                    <path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1v-1z" />
-                    <path d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5h3zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3z" />
-                  </svg>
-                  <b className="barraData">Registrarse</b>
-                </div>
-              )}
               {token && (
                 <div>
-                  {(usuario.fondo === "blanco" && (
+                  {(usuario.fondo !== "negro" && (
                     <div
                       className="barraOpcion"
                       onClick={() => setInput({ fondo: "negro" })}
@@ -286,6 +257,37 @@ const NavbarPage = () => {
                       <b className="barraData">Tema De Fondo</b>
                     </div>
                   )}
+                </div>
+              )}
+              {!token && (
+                <div className="barraOpcion" onClick={handleLogin}>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="30"
+                    height="30"
+                    fill="currentColor"
+                    class="bi bi-cursor"
+                    viewBox="0 0 16 16"
+                  >
+                    <path d="M14.082 2.182a.5.5 0 0 1 .103.557L8.528 15.467a.5.5 0 0 1-.917-.007L5.57 10.694.803 8.652a.5.5 0 0 1-.006-.916l12.728-5.657a.5.5 0 0 1 .556.103zM2.25 8.184l3.897 1.67a.5.5 0 0 1 .262.263l1.67 3.897L12.743 3.52 2.25 8.184z" />
+                  </svg>
+                  <b className="barraData">Iniciar Sesion</b>
+                </div>
+              )}
+              {!token && (
+                <div className="barraOpcion" onClick={handleRegister}>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="30"
+                    height="30"
+                    fill="currentColor"
+                    class="bi bi-clipboard"
+                    viewBox="0 0 16 16"
+                  >
+                    <path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1v-1z" />
+                    <path d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5h3zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3z" />
+                  </svg>
+                  <b className="barraData">Registrarse</b>
                 </div>
               )}
             </div>
