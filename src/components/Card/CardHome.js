@@ -16,10 +16,12 @@ const CardHome = ({ card, i }) => {
     setIdentBusqueda,
     identificadorBusqueda,
     setIdentificadorBusqueda,
+    setIdentInc,
+    setIdentQuit,
+    settings,
     cardSelect,
     exampleImage,
     Delete,
-    cardOpcion,
   } = UseHome();
   //UseStates de modal
   const token = localStorage.getItem("token");
@@ -66,7 +68,11 @@ const CardHome = ({ card, i }) => {
         {identificadorBusqueda === card._id && (
           <div className="SelectCard">
             <div className={cardSelect}>
-              <div className={usuario.fondo !== 'negro' && "cardSelect1" || "cardSelect2"}>
+              <div
+                className={
+                  (usuario.fondo !== "negro" && "cardSelect1") || "cardSelect2"
+                }
+              >
                 {(card.creador === usuario._id && (
                   <div className="option text-danger">
                     <svg
@@ -172,6 +178,40 @@ const CardHome = ({ card, i }) => {
               />
             </div>
           )}
+        </div>
+        <div className="ml-5 d-flex">
+          {(settings === false && (
+            <div>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                fill="currentColor"
+                class="bi bi-cursor"
+                viewBox="0 0 16 16"
+                onClick={() => setIdentInc(card._id)}
+              >
+                <path d="M14.082 2.182a.5.5 0 0 1 .103.557L8.528 15.467a.5.5 0 0 1-.917-.007L5.57 10.694.803 8.652a.5.5 0 0 1-.006-.916l12.728-5.657a.5.5 0 0 1 .556.103zM2.25 8.184l3.897 1.67a.5.5 0 0 1 .262.263l1.67 3.897L12.743 3.52 2.25 8.184z" />
+              </svg>
+            </div>
+          )) || (
+            <div>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                fill="currentColor"
+                class="bi bi-cursor-fill"
+                viewBox="0 0 16 16"
+                onClick={() => setIdentQuit(card._id)}
+              >
+                <path d="M14.082 2.182a.5.5 0 0 1 .103.557L8.528 15.467a.5.5 0 0 1-.917-.007L5.57 10.694.803 8.652a.5.5 0 0 1-.006-.916l12.728-5.657a.5.5 0 0 1 .556.103z" />
+              </svg>
+            </div>
+          )}
+          <div>
+            <p>{card.likes}</p>
+          </div>
         </div>
       </Card>
     </div>

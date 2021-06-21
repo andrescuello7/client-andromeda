@@ -8,8 +8,7 @@ const UseHome = () => {
   //UseStates de modal
   const token = localStorage.getItem("token");
   const headers = { "x-auth-token": token };
-  const [colorBolean, setColorBolean] = useState(true);
-  const [settings, setSettings] = useState(true);
+  const [settings, setSettings] = useState(false);
 
   //UseStates de Aplicacion
   const exampleImage =
@@ -21,6 +20,8 @@ const UseHome = () => {
   const [butonSelect, setButtonSelect] = useState(false);
   const [publicaciones, setPublicaciones] = useState([]);
   const [identificador, setIdentificador] = useState("");
+  const [identInc, setIdentInc] = useState();
+  const [identQuit, setIdentQuit] = useState();
   const [identBusqueda, setIdentBusqueda] = useState("");
   const [identProvincia, setIdentProvincia] = useState("");
   const [publicacionActual, setPublicacionActual] = useState(false);
@@ -51,6 +52,15 @@ const UseHome = () => {
       Delete();
     }
   }, [identificador]);
+
+  useEffect(() => {
+    if (identInc !== undefined) {
+      LikeInc();
+    }
+    if (identQuit !== undefined) {
+      LikeQuit();
+    }
+  }, [identInc, identQuit]);
 
   //Selection de cada Card
   const buttonSelectClick = () => {
@@ -88,6 +98,27 @@ const UseHome = () => {
       }
     }
   };
+
+  const LikeInc = async (e) => {
+    try {
+      const headers = { "x-auth-token": token };
+      await axios.put(`publicacion/inclike/${identInc}`, {}, { headers });
+      setSettings(true);
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
+  const LikeQuit = async (e) => {
+    try {
+      const headers = { "x-auth-token": token };
+      await axios.put(`publicacion/quitlike/${identQuit}`, {}, { headers });
+      setSettings(false);
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
   //Funcion de Eliminar Publicacion
   const Delete = async () => {
     try {
@@ -120,14 +151,15 @@ const UseHome = () => {
       </div>
     )) ||
     publicaciones.map((date, i) => <CardPerfil card={date} key={i} />);
+
   return {
     admin,
     usuario,
+    settings,
     proveedor,
     cardSelect,
     butonSelect,
     MapDataBase,
-    colorBolean,
     exampleImage,
     identificador,
     identBusqueda,
@@ -138,6 +170,7 @@ const UseHome = () => {
     identificadorBusqueda,
     Delete,
     Usuario,
+    LikeInc,
     setAdmin,
     setSettings,
     Publicacion,
@@ -148,6 +181,8 @@ const UseHome = () => {
     setIdentBusqueda,
     buttonSelectClick,
     setIdentProvincia,
+    setIdentInc,
+    setIdentQuit,
     setPublicacionActual,
     setIdentificadorBusqueda,
   };
