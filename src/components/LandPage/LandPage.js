@@ -20,7 +20,6 @@ const LandPage = () => {
         {!token && <div className="mt-5"></div>}
         <div className="w-100 d-flex flex-column-reverse">{MapDataBase}</div>
       </div>
-      <div className="mt-5"></div>
     </div>
   );
 };

@@ -23,7 +23,6 @@
 }
 .ColorDePublic {
   width: 100%;
-  background: url("./fondo-web.jpg");
   background: rgba(172, 25, 25, 0);
   background-size: cover;
   background-repeat: no-repeat;

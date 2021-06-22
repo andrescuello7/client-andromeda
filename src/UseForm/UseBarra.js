@@ -1,8 +1,4 @@
-import { useState, useEffect } from "react";
-import axios from "axios";
-import { Card, NavDropdown, Spinner, Modal, Button } from "react-bootstrap";
-import UseHome from "./UseHome";
-import imagenPredeterminada from "../flyer.jpeg";
+import { useState } from "react";
 
 const UseBusqueda = () => {
   //UseStates de Aplicacion

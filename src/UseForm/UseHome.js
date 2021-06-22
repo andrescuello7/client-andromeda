@@ -29,17 +29,6 @@ const UseHome = () => {
   const [publicacionActual, setPublicacionActual] = useState(false);
   const [identificadorBusqueda, setIdentificadorBusqueda] = useState("");
 
-  //If de filtros de busqueda
-  if (identBusqueda.length !== 0) {
-    localStorage.setItem("identBusqueda", identBusqueda);
-    window.location.href = "/buscar";
-  }
-
-  if (identProvincia.length !== 0) {
-    localStorage.setItem("identProvincia", identProvincia);
-    window.location.href = "/provincia";
-  }
-
   //useEffects de Use Home
   useEffect(() => {
     Publicacion();
@@ -70,6 +59,17 @@ const UseHome = () => {
     }
   }, [identComentario]);
 
+  //If de filtros de busqueda
+  if (identBusqueda.length !== 0) {
+    localStorage.setItem("identBusqueda", identBusqueda);
+    window.location.href = "/buscar";
+  }
+
+  if (identProvincia.length !== 0) {
+    localStorage.setItem("identProvincia", identProvincia);
+    window.location.href = "/provincia";
+  }
+
   //Selection de cada Card
   const buttonSelectClick = () => {
     if (butonSelect === true) {
@@ -87,6 +87,7 @@ const UseHome = () => {
       const { data } = await axios.get("auth", {
         headers,
       });
+      localStorage.setItem("fondo", data.usuario.fondo);
       setUsuario(data.usuario);
       setAdmin(data.usuario.estado);
       setProveedor(data.usuario.usuario);

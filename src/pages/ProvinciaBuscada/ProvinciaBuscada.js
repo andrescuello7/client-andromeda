@@ -5,9 +5,10 @@ import UseHome from "../../UseForm/UseHome";
 const ProvinciaBuscada = () => {
   const { MapDataBaseBuscado } = UseProvincia();
   const { usuario } = UseHome();
+  const fondo = localStorage.getItem("fondo");
 
   return (
-    <div className={usuario.fondo !== 'negro' && "BackgroundColor1" || "BackgroundColor2"}>
+    <div className={fondo !== 'negro' && "BackgroundColor1" || "BackgroundColor2"}>
       <div className="VistaPrincipal">
         <div className="barra sticky-top">
           <Barra />
@@ -16,7 +17,6 @@ const ProvinciaBuscada = () => {
           <div className="w-100 d-flex flex-column-reverse">
             {MapDataBaseBuscado}
           </div>
-          <div className="mt-5"></div>
         </div>
         <div className="perfilAnuncios"></div>
       </div>

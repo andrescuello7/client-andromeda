@@ -19,6 +19,7 @@ const UsePerfil = () => {
     const changedInput = { ...input, [name]: value };
     setInput(changedInput);
   };
+
   const onChangeDate = async (e) => {
     const headers = { "x-auth-token": token };
     try {
@@ -28,6 +29,7 @@ const UsePerfil = () => {
       console.log(error);
     }
   };
+  
   //Codigo para foto base 64
   const onChangeImg = async (e) => {
     const headers = { "x-auth-token": token };
