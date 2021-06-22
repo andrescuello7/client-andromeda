@@ -36,7 +36,7 @@ const Perfil = () => {
                     width="25"
                     height="25"
                     fill="currentColor"
-                    class="bi bi-envelope-fill"
+                    className="bi bi-envelope-fill"
                     viewBox="0 0 16 16"
                   >
                     <path d="M.05 3.555A2 2 0 0 1 2 2h12a2 2 0 0 1 1.95 1.555L8 8.414.05 3.555zM0 4.697v7.104l5.803-3.558L0 4.697zM6.761 8.83l-6.57 4.027A2 2 0 0 0 2 14h12a2 2 0 0 0 1.808-1.144l-6.57-4.027L8 9.586l-1.239-.757zm3.436-.586L16 11.801V4.697l-5.803 3.546z" />
@@ -50,7 +50,7 @@ const Perfil = () => {
                       width="25"
                       height="25"
                       fill="currentColor"
-                      class="bi bi-telephone-fill"
+                      className="bi bi-telephone-fill"
                       viewBox="0 0 16 16"
                     >
                       <path
@@ -68,7 +68,7 @@ const Perfil = () => {
                       width="25"
                       height="25"
                       fill="currentColor"
-                      class="bi bi-facebook"
+                      className="bi bi-facebook"
                       viewBox="0 0 16 16"
                     >
                       <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z" />
@@ -100,12 +100,7 @@ const Perfil = () => {
       <div>
         <Form>
           <Modal show={show} onHide={handleClose}>
-            <Modal.Header className="w-100" closeButton>
-              <Modal.Title className="text-center">
-                Actualizar Datos
-              </Modal.Title>
-            </Modal.Header>
-            <Modal.Body>
+            <Modal.Body  className="ModalPost" closeButton>
               <div className="pl-2">
                 <div className="d-flex">
                   <svg
@@ -113,7 +108,7 @@ const Perfil = () => {
                     width="30"
                     height="30"
                     fill="currentColor"
-                    class="bi bi-person-square"
+                    className="bi bi-person-square"
                     viewBox="0 0 16 16"
                   >
                     <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z" />
@@ -133,7 +128,7 @@ const Perfil = () => {
                     width="30"
                     height="30"
                     fill="currentColor"
-                    class="bi bi-facebook"
+                    className="bi bi-facebook"
                     viewBox="0 0 16 16"
                   >
                     <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z" />
@@ -152,7 +147,7 @@ const Perfil = () => {
                     width="30"
                     height="30"
                     fill="currentColor"
-                    class="bi bi-telephone-fill"
+                    className="bi bi-telephone-fill"
                     viewBox="0 0 16 16"
                   >
                     <path
@@ -174,7 +169,7 @@ const Perfil = () => {
                     width="30"
                     height="30"
                     fill="currentColor"
-                    class="bi bi-person-bounding-box"
+                    className="bi bi-person-bounding-box"
                     viewBox="0 0 16 16"
                   >
                     <path d="M1.5 1a.5.5 0 0 0-.5.5v3a.5.5 0 0 1-1 0v-3A1.5 1.5 0 0 1 1.5 0h3a.5.5 0 0 1 0 1h-3zM11 .5a.5.5 0 0 1 .5-.5h3A1.5 1.5 0 0 1 16 1.5v3a.5.5 0 0 1-1 0v-3a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 1-.5-.5zM.5 11a.5.5 0 0 1 .5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 1 0 1h-3A1.5 1.5 0 0 1 0 14.5v-3a.5.5 0 0 1 .5-.5zm15 0a.5.5 0 0 1 .5.5v3a1.5 1.5 0 0 1-1.5 1.5h-3a.5.5 0 0 1 0-1h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 1 .5-.5z" />
@@ -191,7 +186,7 @@ const Perfil = () => {
                 </div>
               </div>
             </Modal.Body>
-            <Modal.Footer>
+            <Modal.Footer  className="ModalPost">
               <button
                 className="btn btn-outline-primary w-100"
                 onClick={onChangeDate}

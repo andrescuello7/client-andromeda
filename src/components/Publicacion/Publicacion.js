@@ -60,7 +60,7 @@ const Publicacion = () => {
               width="16"
               height="16"
               fill="currentColor"
-              class="bi bi-card-image"
+              className="bi bi-card-image"
               viewBox="0 0 16 16"
             >
               <path d="M6.002 5.5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0z" />

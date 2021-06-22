@@ -6,7 +6,7 @@ import { Card, Spinner } from "react-bootstrap";
 const UseBusqueda = () => {
   //UseStates de Aplicacion
   const [publicacionesBusqueda, setPublicacionesBusqueda] = useState([]);
-  const { setIdentInc, setIdentQuit, settings } = UseHome();
+  const { setIdentInc, setIdentQuit, settings, usuario, card, HandleChange, setIdentComentario, comentarios } = UseHome();
   const identProvincia = localStorage.getItem("identProvincia");
   const exampleImage =
     "https://www.webespacio.com/wp-content/uploads/2010/12/perfil-facebook.jpg";
@@ -77,7 +77,7 @@ const UseBusqueda = () => {
                       width="16"
                       height="16"
                       fill="currentColor"
-                      class="bi bi-cursor"
+                      className="bi bi-cursor"
                       viewBox="0 0 16 16"
                       onClick={() => setIdentInc(date._id)}
                     >
@@ -91,7 +91,7 @@ const UseBusqueda = () => {
                       width="16"
                       height="16"
                       fill="currentColor"
-                      class="bi bi-cursor-fill"
+                      className="bi bi-cursor-fill"
                       viewBox="0 0 16 16"
                       onClick={() => setIdentQuit(date._id)}
                     >
@@ -103,6 +103,36 @@ const UseBusqueda = () => {
                   <p>{date.likes}</p>
                 </div>
               </div>
+              <div>
+                <hr className={usuario.fondo !== "negro" && "bg-dark" || "bg-light"} />
+              </div>
+              {date.comentarios && (<div>
+                {date.comentarios.map((date, i) =>
+                <div className="d-flex ml-2 mb-2" key={i}>
+                  <img className="NavbarFoto" src={date.usuario || exampleImage} alt="" />
+                <div>{date.contenido}</div>
+              </div>)}
+              </div>)}
+              {usuario.imagen &&(<div className="d-flex ml-2 mb-2 mr-2">
+                <img className="NavbarFoto" src={usuario.imagen || exampleImage} alt="" />
+              <input 
+                className={(usuario.fondo !== "negro" && "input") || "input2"}
+                onChange={HandleChange}
+                type="text"
+                name="contenido"/>
+              <button className={(usuario.fondo !== "negro" && "btn btn-outline-dark") || "btn btn-outline-light"} onClick={() => setIdentComentario(date._id)} >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="16"
+                  height="16"
+                  fill="currentColor"
+                  className="bi bi-cursor-fill"
+                  viewBox="0 0 16 16"
+                >
+                <path d="M14.082 2.182a.5.5 0 0 1 .103.557L8.528 15.467a.5.5 0 0 1-.917-.007L5.57 10.694.803 8.652a.5.5 0 0 1-.006-.916l12.728-5.657a.5.5 0 0 1 .556.103z" />
+                </svg>
+              </button>
+            </div>)}
             </Card>
           </div>
         )}

@@ -22,6 +22,8 @@ const UseHome = () => {
   const [identificador, setIdentificador] = useState("");
   const [identInc, setIdentInc] = useState();
   const [identQuit, setIdentQuit] = useState();
+  const [identComentario, setIdentComentario] = useState();
+  const [comentarios, setComentarios] = useState();
   const [identBusqueda, setIdentBusqueda] = useState("");
   const [identProvincia, setIdentProvincia] = useState("");
   const [publicacionActual, setPublicacionActual] = useState(false);
@@ -41,7 +43,7 @@ const UseHome = () => {
   //useEffects de Use Home
   useEffect(() => {
     Publicacion();
-  }, [publicaciones]);
+  }, [publicaciones, identComentario]);
 
   useEffect(() => {
     Usuario();
@@ -61,6 +63,12 @@ const UseHome = () => {
       LikeQuit();
     }
   }, [identInc, identQuit]);
+
+  useEffect(() => {
+    if(identComentario !== undefined){
+      Comentarios();
+    }
+  }, [identComentario]);
 
   //Selection de cada Card
   const buttonSelectClick = () => {
@@ -119,6 +127,27 @@ const UseHome = () => {
     }
   };
 
+  const Comentarios = async (e) => {
+    try {
+      const headers = { "x-auth-token": token };
+      const {data} = await axios.post(`publicacion/comentario/${identComentario}`, comentarios, { headers });
+      console.log(data)
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
+  const HandleChange = (e) => {
+    const { name, value } = e.target;
+    const changedInput = {
+      "comentarios": {
+      [name]: value,
+      usuario: usuario.imagen,
+      }
+    };
+    setComentarios(changedInput);
+  };
+
   //Funcion de Eliminar Publicacion
   const Delete = async () => {
     try {
@@ -167,6 +196,7 @@ const UseHome = () => {
     identProvincia,
     publicacionActual,
     MapComparatePublic,
+    comentarios,
     identificadorBusqueda,
     Delete,
     Usuario,
@@ -181,10 +211,13 @@ const UseHome = () => {
     setIdentBusqueda,
     buttonSelectClick,
     setIdentProvincia,
+    setIdentComentario,
     setIdentInc,
     setIdentQuit,
+    setComentarios,
     setPublicacionActual,
     setIdentificadorBusqueda,
+    HandleChange,
   };
 };
 export default UseHome;

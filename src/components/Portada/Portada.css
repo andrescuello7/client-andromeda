@@ -46,7 +46,7 @@
 }
 @media (max-Width: 780px){
   .PortadaPrincipal{
-    color: antiquewhite;
+    color: rgb(255, 255, 255);
     margin-top: 0%;
     margin-left: 0%;
     display: flex;
@@ -58,7 +58,7 @@
     background-size: cover;
   }
   .PortadaPrincipalBuscado{
-    color: antiquewhite;
+    color: rgb(255, 255, 255);
     margin-top: 0%;
     margin-left: 0%;
     display: flex;

@@ -71,7 +71,7 @@ const NavbarPage = () => {
                 width="23"
                 height="23"
                 fill="currentColor"
-                class="bi bi-signpost-2"
+                className="bi bi-signpost-2"
                 viewBox="0 0 16 16"
               >
                 <path d="M7 1.414V2H2a1 1 0 0 0-1 1v2a1 1 0 0 0 1 1h5v1H2.5a1 1 0 0 0-.8.4L.725 8.7a.5.5 0 0 0 0 .6l.975 1.3a1 1 0 0 0 .8.4H7v5h2v-5h5a1 1 0 0 0 1-1V8a1 1 0 0 0-1-1H9V6h4.5a1 1 0 0 0 .8-.4l.975-1.3a.5.5 0 0 0 0-.6L14.3 2.4a1 1 0 0 0-.8-.4H9v-.586a1 1 0 0 0-2 0zM13.5 3l.75 1-.75 1H2V3h11.5zm.5 5v2H2.5l-.75-1 .75-1H14z" />
@@ -82,7 +82,7 @@ const NavbarPage = () => {
                 width="23"
                 height="23"
                 fill="currentColor"
-                class="bi bi-signpost-2 text-light"
+                className="bi bi-signpost-2 text-light"
                 viewBox="0 0 16 16"
               >
                 <path d="M7 1.414V2H2a1 1 0 0 0-1 1v2a1 1 0 0 0 1 1h5v1H2.5a1 1 0 0 0-.8.4L.725 8.7a.5.5 0 0 0 0 .6l.975 1.3a1 1 0 0 0 .8.4H7v5h2v-5h5a1 1 0 0 0 1-1V8a1 1 0 0 0-1-1H9V6h4.5a1 1 0 0 0 .8-.4l.975-1.3a.5.5 0 0 0 0-.6L14.3 2.4a1 1 0 0 0-.8-.4H9v-.586a1 1 0 0 0-2 0zM13.5 3l.75 1-.75 1H2V3h11.5zm.5 5v2H2.5l-.75-1 .75-1H14z" />
@@ -165,7 +165,7 @@ const NavbarPage = () => {
                   width="30"
                   height="30"
                   fill="currentColor"
-                  class="bi bi-compass"
+                  className="bi bi-compass"
                   viewBox="0 0 16 16"
                 >
                   <path d="M8 16.016a7.5 7.5 0 0 0 1.962-14.74A1 1 0 0 0 9 0H7a1 1 0 0 0-.962 1.276A7.5 7.5 0 0 0 8 16.016zm6.5-7.5a6.5 6.5 0 1 1-13 0 6.5 6.5 0 0 1 13 0z" />
@@ -181,7 +181,7 @@ const NavbarPage = () => {
                   width="30"
                   height="30"
                   fill="currentColor"
-                  class="bi bi-gear"
+                  className="bi bi-gear"
                   viewBox="0 0 16 16"
                 >
                   <path d="M8 4.754a3.246 3.246 0 1 0 0 6.492 3.246 3.246 0 0 0 0-6.492zM5.754 8a2.246 2.246 0 1 1 4.492 0 2.246 2.246 0 0 1-4.492 0z" />
@@ -196,7 +196,7 @@ const NavbarPage = () => {
                     width="30"
                     height="30"
                     fill="currentColor"
-                    class="bi bi-person"
+                    className="bi bi-person"
                     viewBox="0 0 16 16"
                   >
                     <path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0zm4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4zm-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10z" />
@@ -211,7 +211,7 @@ const NavbarPage = () => {
                     width="30"
                     height="30"
                     fill="currentColor"
-                    class="bi bi-backspace"
+                    className="bi bi-backspace"
                     viewBox="0 0 16 16"
                   >
                     <path d="M5.83 5.146a.5.5 0 0 0 0 .708L7.975 8l-2.147 2.146a.5.5 0 0 0 .707.708l2.147-2.147 2.146 2.147a.5.5 0 0 0 .707-.708L9.39 8l2.146-2.146a.5.5 0 0 0-.707-.708L8.683 7.293 6.536 5.146a.5.5 0 0 0-.707 0z" />
@@ -232,7 +232,7 @@ const NavbarPage = () => {
                         width="30"
                         height="30"
                         fill="currentColor"
-                        class="bi bi-toggle-off"
+                        className="bi bi-toggle-off"
                         viewBox="0 0 16 16"
                       >
                         <path d="M11 4a4 4 0 0 1 0 8H8a4.992 4.992 0 0 0 2-4 4.992 4.992 0 0 0-2-4h3zm-6 8a4 4 0 1 1 0-8 4 4 0 0 1 0 8zM0 8a5 5 0 0 0 5 5h6a5 5 0 0 0 0-10H5a5 5 0 0 0-5 5z" />
@@ -249,7 +249,7 @@ const NavbarPage = () => {
                         width="30"
                         height="30"
                         fill="currentColor"
-                        class="bi bi-toggle-on"
+                        className="bi bi-toggle-on"
                         viewBox="0 0 16 16"
                       >
                         <path d="M5 3a5 5 0 0 0 0 10h6a5 5 0 0 0 0-10H5zm6 9a4 4 0 1 1 0-8 4 4 0 0 1 0 8z" />
@@ -266,7 +266,7 @@ const NavbarPage = () => {
                     width="30"
                     height="30"
                     fill="currentColor"
-                    class="bi bi-cursor"
+                    className="bi bi-cursor"
                     viewBox="0 0 16 16"
                   >
                     <path d="M14.082 2.182a.5.5 0 0 1 .103.557L8.528 15.467a.5.5 0 0 1-.917-.007L5.57 10.694.803 8.652a.5.5 0 0 1-.006-.916l12.728-5.657a.5.5 0 0 1 .556.103zM2.25 8.184l3.897 1.67a.5.5 0 0 1 .262.263l1.67 3.897L12.743 3.52 2.25 8.184z" />
@@ -281,7 +281,7 @@ const NavbarPage = () => {
                     width="30"
                     height="30"
                     fill="currentColor"
-                    class="bi bi-clipboard"
+                    className="bi bi-clipboard"
                     viewBox="0 0 16 16"
                   >
                     <path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1v-1z" />
