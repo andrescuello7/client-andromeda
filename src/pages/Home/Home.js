@@ -6,12 +6,12 @@ const Home = () => {
   const { usuario } = UseHome();
   const fondo = localStorage.getItem("fondo");
   return (
-    <div className={fondo !== 'negro' && "BackgroundColor1" || "BackgroundColor2"}>
+    <div className={usuario.fondo !== 'negro' && "BackgroundColor1" || "BackgroundColor2"}>
       <div className="VistaPrincipal">
         <div className="barra sticky-top">
           <Barra />
         </div>
-        <div className="muro">
+        <div className="muro2">
           <LandPage />
         </div>
         <div className="anuncios"></div>
