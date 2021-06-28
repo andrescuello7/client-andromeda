@@ -11,7 +11,7 @@ import UsePerfil from "../../UseForm/UsePerfil";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSearch } from "@fortawesome/free-solid-svg-icons";
 
-const NavbarPage = () => {
+const NavbarPage = (props) => {
   const token = localStorage.getItem("token");
   const { usuario } = UseHome();
   const { exampleImage } = UsePerfil();

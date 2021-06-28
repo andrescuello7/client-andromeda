@@ -20,10 +20,12 @@ import Footer from "./components/Footer/FooterBasico";
 axios.defaults.baseURL = "https://server-andromeda.herokuapp.com/api/";
 
 function App() {
+  const [searchTerm, setSearchTerm] = useState("")
+  const searchHandler = () => {};
   return (
     <div className="App">
        <Router>
-        <Navbar />
+        <Navbar term={searchTerm} searchKeyWords={searchHandler}/>
         <Switch>
           <Route path="/" exact>
             <Home />
