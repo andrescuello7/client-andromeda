@@ -21,34 +21,7 @@ const Footer = () => {
           <footer>
             <div className="main-content">
               <div className="left box">
-                <h2>About us</h2>
-                <div className="content">
-                  <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Ullam facere nam accusamus earum laborum, blanditiis,
-                    aspernatur cumque saepe voluptate odit temporibus qui,
-                    sapiente reprehenderit soluta beatae. Architecto magnam
-                    harum consequuntur.
-                  </p>
-                  <div className="social">
-                    <a href="#">
-                      <span className="fab fa-facebook-f"></span>
-                    </a>
-                    <a href="#">
-                      <span className="fab fa-twitter"></span>
-                    </a>
-                    <a href="#">
-                      <span className="fab fa-instagram"></span>
-                    </a>
-                    <a href="#">
-                      <span className="fab fa-youtube"></span>
-                    </a>
-                  </div>
-                </div>
-              </div>
-
-              <div className="center box">
-                <h2>Address</h2>
+              <h2>Address</h2>
                 <div className="mt-2">
                   <div className="place">
                     <span className="fas fa-map-marker-alt button-map"></span>
@@ -61,6 +34,27 @@ const Footer = () => {
                   <div className="email">
                     <span className="fas fa-envelope button-map"></span>
                     <span className="text">Birendranger, Surknet</span>
+                  </div>
+                </div>
+               
+              </div>
+
+              <div className="center box">
+                <div className="content mt-5">
+                  <div className="social text-center">
+                  <h1>Logo</h1>
+                    <a href="#">
+                      <span className="fab fa-facebook-f button-map"></span>
+                    </a>
+                    <a href="#">
+                      <span className="fab fa-twitter button-map"></span>
+                    </a>
+                    <a href="#">
+                      <span className="fab fa-instagram button-map"></span>
+                    </a>
+                    <a href="#">
+                      <span className="fab fa-youtube button-map"></span>
+                    </a>
                   </div>
                 </div>
               </div>
