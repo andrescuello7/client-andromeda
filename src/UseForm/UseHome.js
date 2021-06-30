@@ -54,7 +54,7 @@ const UseHome = () => {
   }, [identInc, identQuit]);
 
   useEffect(() => {
-    if(identComentario !== undefined){
+    if (identComentario !== undefined) {
       Comentarios();
     }
   }, [identComentario]);
@@ -131,8 +131,12 @@ const UseHome = () => {
   const Comentarios = async (e) => {
     try {
       const headers = { "x-auth-token": token };
-      const {data} = await axios.post(`publicacion/comentario/${identComentario}`, comentarios, { headers });
-      console.log(data)
+      const { data } = await axios.post(
+        `publicacion/comentario/${identComentario}`,
+        comentarios,
+        { headers }
+      );
+      console.log(data);
     } catch (error) {
       console.log(error);
     }
@@ -141,10 +145,10 @@ const UseHome = () => {
   const HandleChange = (e) => {
     const { name, value } = e.target;
     const changedInput = {
-      "comentarios": {
-      [name]: value,
-      usuario: usuario.imagen,
-      }
+      comentarios: {
+        [name]: value,
+        usuario: usuario.imagen,
+      },
     };
     setComentarios(changedInput);
   };

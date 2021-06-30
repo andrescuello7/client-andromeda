@@ -139,6 +139,11 @@
 .ListaAbout {
   list-style: none;
 }
+.headingPerfil{
+  display: flex;
+  justify-content: center;
+  height: 200px;
+}
 @media (max-width: 780px) {
   .VistaPrincipal {
     background-size: cover;

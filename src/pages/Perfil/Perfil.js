@@ -2,7 +2,7 @@ import UseHome from "../../UseForm/UseHome";
 import Portada from "../../components/Portada/Portada";
 
 const Perfil = () => {
-  const { usuario, MapComparatePublic } = UseHome();
+  const { publicaciones, usuario, MapComparatePublic } = UseHome();
   const fondo = localStorage.getItem("fondo");
 
   return (

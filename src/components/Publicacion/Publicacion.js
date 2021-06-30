@@ -24,6 +24,7 @@ const Publicacion = () => {
       <form onSubmit={HandleSubmit}>
         <div>
           <textarea
+            className={usuario.fondo !== "negro" && "text-dark" || "text-light"}
             onChange={(e) => HandleChange(e)}
             placeholder="Publicacion..."
             type="text"
@@ -70,8 +71,8 @@ const Publicacion = () => {
           <button
             type="submit"
             className={
-              (usuario.fondo === "blanco" && "btn btnPublicacion text-dark") ||
-              "btn btnPublicacion text-light"
+              (usuario.fondo === "blanco" && "btn btnPublicacion text-light") ||
+              "btn btnPublicacion text-dark"
             }
           >
             <b>Publicar</b>
