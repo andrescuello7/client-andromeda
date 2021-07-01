@@ -7,12 +7,11 @@ import Barra from "../../components/Barra/Barra";
 const Perfil = () => {
   const { MapDataBaseBuscado } = UseBusqueda();
   const { usuario } = UseHome();
-  const fondo = localStorage.getItem("fondo");
 
   return (
-    <div className={fondo !== 'negro' && "BackgroundColor1" || "BackgroundColor2"}>
+    <div className={usuario.fondo !== 'negro' && "BackgroundColor1" || "BackgroundColor2"}>
       <div className="VistaPrincipal">
-        <div className="barra sticky-top">
+        <div className="barra sticky-top  animate__animated animate__bounce">
           <Barra />
         </div>
         <div className="ColorDePerfilBuscado perfil">

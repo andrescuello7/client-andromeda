@@ -218,7 +218,7 @@ const CardHome = ({ card, i }) => {
           </div>
         </div>
         <div>
-          <hr className="bg-dark" />
+          <hr className="bg-secondary" />
         </div>
         {card.comentarios && (
           <div>

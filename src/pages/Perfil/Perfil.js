@@ -8,12 +8,12 @@ const Perfil = () => {
   return (
     <div
       className={
-        (fondo !== 'negro' && "BackgroundColor1" || "BackgroundColor2")
+        (fondo !== "negro" && "BackgroundColor1") || "BackgroundColor2"
       }
     >
       <div className="w-100 d-flex justify-content-center">
         <div className="w-100 d-flex justify-content-center flex-column">
-          <div className="ColorDePerfil">
+          <div className="ColorDePerfil animate__animated animate__bounce">
             <Portada />
           </div>
           <div className="ColorDePublic">
@@ -21,6 +21,7 @@ const Perfil = () => {
               {MapComparatePublic}
             </div>
           </div>
+          <div className="headingPerfil"></div>
         </div>
       </div>
     </div>

@@ -63,7 +63,7 @@ const NavbarPage = () => {
           "BackgroundColor2"
         }
       >
-        <Navbar className="NavbarTwo">
+        <Navbar className="NavbarTwo sticky-top">
           <Navbar.Brand as={Link} to="/">
             {(usuario.fondo !== "negro" && (
               <svg
