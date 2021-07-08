@@ -17,6 +17,11 @@
   min-height: 180px;
   border: solid 1px rgba(131, 131, 131, 0.664);
 }
+.opcionDateOfUser{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
 @media(max-Width: 780px) {
   .CardDiv {
     position: relative;

@@ -221,7 +221,6 @@
     flex-direction: column;
   }
   .About {
-    background: url(http://cdn.shopify.com/s/files/1/1801/1563/articles/Portada_Blog_fotografia_urbana.jpg?v=1532458593);
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: local;
@@ -234,7 +233,7 @@
   .AboutImgen {
     min-height: 100%;
     background: #2e2d2da2;
-    padding: 4% 2%;
+    padding: 12% 2%;
     display: flex;
     justify-content: center;
   }

@@ -70,10 +70,7 @@ const Publicacion = () => {
           </Button>
           <button
             type="submit"
-            className={
-              (usuario.fondo === "blanco" && "btn btnPublicacion text-light") ||
-              "btn btnPublicacion text-dark"
-            }
+            className="btn btnPublicacion text-light"
           >
             <b>Publicar</b>
           </button>
