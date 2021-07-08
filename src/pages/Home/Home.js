@@ -4,11 +4,10 @@ import UseHome from "../../UseForm/UseHome";
 
 const Home = () => {
   const { usuario } = UseHome();
-  const fondo = localStorage.getItem("fondo");
   return (
     <div className={usuario.fondo !== 'negro' && "BackgroundColor1" || "BackgroundColor2"}>
       <div className="VistaPrincipal">
-        <div className="barra sticky-top animate__animated animate__bounce">
+        <div className="barra">
           <Barra />
         </div>
         <div className="muro2">
@@ -20,3 +19,5 @@ const Home = () => {
   );
 };
 export default Home;
+
+//animation option no funcion for moment:  sticky-top animate__animated animate__bounce

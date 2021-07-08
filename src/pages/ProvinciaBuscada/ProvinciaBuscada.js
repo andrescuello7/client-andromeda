@@ -9,7 +9,7 @@ const ProvinciaBuscada = () => {
   return (
     <div className={usuario.fondo !== 'negro' && "BackgroundColor1" || "BackgroundColor2"}>
       <div className="VistaPrincipal">
-        <div className="barra sticky-top  animate__animated animate__bounce">
+        <div className="barra">
           <Barra />
         </div>
         <div className="muro2">
