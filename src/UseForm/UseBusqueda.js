@@ -5,7 +5,7 @@ import { Card, Spinner } from "react-bootstrap";
 
 const UseBusqueda = () => {
   //UseStates de Aplicacion
-  const { setIdentInc, setIdentQuit, settings, usuario, card, HandleChange, setIdentComentario, comentarios } = UseHome();
+  const { setIdentInc, setIdentQuit, settings, usuario, HandleChange, setIdentComentario } = UseHome();
   const [usuarioBusqueda, setUsuarioBusqueda] = useState([]);
   const [publicacionesBusqueda, setPublicacionesBusqueda] = useState([]);
   const identBusqueda = localStorage.getItem("identBusqueda");

@@ -1,4 +1,3 @@
-import { useEffect } from "react";
 import { Card } from "react-bootstrap";
 import UseHome from "../../UseForm/UseHome";
 
@@ -12,15 +11,10 @@ const CardPerfil = ({ card, i }) => {
     setIdentBusqueda,
     identificadorBusqueda,
     setIdentificadorBusqueda,
-    butonSelect,
-    setButtonSelect,
     cardSelect,
-    setCardSelect,
     exampleImage,
     buttonSelectClick,
   } = UseHome();
-  //UseStates de modal
-  const token = localStorage.getItem("token");
 
   //If de filtros de busqueda
   if (identBusqueda.length !== 0) {

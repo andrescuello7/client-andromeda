@@ -2,14 +2,12 @@ import "./Login.css";
 import { Form, Button } from "react-bootstrap";
 import UsePasword from "../../UseForm/UsePasword";
 import axios from "axios";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 
 const Login = () => {
   const [input, setInput] = useState({});
-  const [validationSubmit, setValidationSubmit] = useState(false);
   const [validation, setValidation] = useState(false);
   const [PasswordInputType, ToogleIcon] = UsePasword();
-  const token = localStorage.getItem("token");
 
   const HandleChange = (e) => {
     const { name, value } = e.target;

@@ -6,7 +6,7 @@ import { Card, Spinner } from "react-bootstrap";
 const UseBusqueda = () => {
   //UseStates de Aplicacion
   const [publicacionesBusqueda, setPublicacionesBusqueda] = useState([]);
-  const { setIdentInc, setIdentQuit, settings, usuario, card, HandleChange, setIdentComentario, comentarios } = UseHome();
+  const { setIdentInc, setIdentQuit, settings, usuario, HandleChange, setIdentComentario } = UseHome();
   const identProvincia = localStorage.getItem("identProvincia");
   const exampleImage =
     "https://www.webespacio.com/wp-content/uploads/2010/12/perfil-facebook.jpg";

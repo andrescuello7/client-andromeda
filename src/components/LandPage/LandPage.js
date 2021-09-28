@@ -1,12 +1,9 @@
 import UseHome from "../../UseForm/UseHome";
-import UseProvincia from "../../UseForm/UseProvincia";
 import Publicacion from "../Publicacion/Publicacion";
-import { useState } from "react";
 
 const LandPage = () => {
   //Declaracion de datos traidos de Hook Home y Token de LocalStorage
-  const { MapDataBaseBuscado } = UseProvincia();
-  const { MapDataBase, usuario } = UseHome();
+  const { MapDataBase } = UseHome();
   const token = localStorage.getItem("token");
 
   return (

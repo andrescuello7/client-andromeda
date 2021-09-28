@@ -1,9 +1,7 @@
 import "./Barra.css";
-import { useState } from "react";
-import { Modal, Button, Dropdown, Form, Col } from "react-bootstrap";
+import { Form } from "react-bootstrap";
 import useBarra from "../../UseForm/UseBarra";
 import UseHome from "../../UseForm/UseHome";
-import UseSearch from "../../UseForm/UseSearch";
 
 const Barra = () => {
   //Token de localStorage
@@ -12,17 +10,15 @@ const Barra = () => {
   //Hook de UseHome y useBarra
   const {
     usuario,
-    setSearch,
     exampleImage,
     setIdentProvincia,
-    identProvincia,
   } = UseHome();
   const { handleLogOut, handlePerfil, handleRegister, handleLogin } =
     useBarra();
 
   //Lee los names
   const HandleChange = (e) => {
-    const { name, value } = e.target;
+    const { value } = e.target;
     const changedInput = value;
     setIdentProvincia(changedInput);
     console.log(changedInput);

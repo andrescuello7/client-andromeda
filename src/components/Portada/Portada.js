@@ -1,24 +1,17 @@
-import { Modal, Button, Form } from "react-bootstrap";
-import { useState } from "react";
-import Portada from "./Portada.css";
+import { Modal, Form } from "react-bootstrap";
 import UseHome from "../../UseForm/UseHome";
 import UsePerfil from "../../UseForm/UsePerfil";
-import axios from "axios";
 
 const Perfil = () => {
-  const token = localStorage.getItem("token");
   const { usuario } = UseHome();
   const {
     onChangeImg,
     exampleImage,
-    handlePic,
     handleClose,
     show,
-    setShow,
     HandleChangePerfil,
     onChangeDate,
     handleShow,
-    setInput,
   } = UsePerfil();
 
   return (

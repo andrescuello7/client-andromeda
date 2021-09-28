@@ -58,8 +58,6 @@ const UsePerfil = () => {
     exampleImage,
     onChangeImg,
     token,
-    onChangeImg,
-    exampleImage,
     show,
     setShow,
     HandleChangePerfil,

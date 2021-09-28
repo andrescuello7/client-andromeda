@@ -1,14 +1,9 @@
-import { Modal, Button, Form } from "react-bootstrap";
-import { useState } from "react";
 import UseBusqueda from "../../UseForm/UseBusqueda";
-import UseHome from "../../UseForm/UseHome";
 import UsePerfil from "../../UseForm/UsePerfil";
-import axios from "axios";
 
 const Perfil = () => {
-  const token = localStorage.getItem("token");
   const { usuarioBusqueda } = UseBusqueda();
-  const { onChangeImg, exampleImage } = UsePerfil();
+  const { exampleImage } = UsePerfil();
 
   return (
     <div className="w-100 d-flex justify-content-center">

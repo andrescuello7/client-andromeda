@@ -1,5 +1,4 @@
-import { Form, Col, Navbar, Dropdown, Button, Nav } from "react-bootstrap";
-import UsePerfil from "../../UseForm/UsePerfil";
+import { Form, Navbar, Nav } from "react-bootstrap";
 import UseBarra from "../../UseForm/UseBarra";
 import UseHome from "../../UseForm/UseHome";
 import { Link } from "react-router-dom";
@@ -11,7 +10,6 @@ const NavbarPage = () => {
   //Hooks de Form
   const token = localStorage.getItem("token");
   const { usuario, setIdentProvincia } = UseHome();
-  const { exampleImage } = UsePerfil();
   const { handleLogOut, handlePerfil, handleRegister, handleLogin } =
     UseBarra();
 
@@ -49,7 +47,7 @@ const NavbarPage = () => {
 
   //Lee los names
   const HandleChange = (e) => {
-    const { name, value } = e.target;
+    const { value } = e.target;
     const changedInput = value;
     setIdentProvincia(changedInput);
     console.log(changedInput);

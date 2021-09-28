@@ -1,10 +1,7 @@
 import "./Publicacion.css";
-import { NavDropdown, Modal, Button, Form, Col } from "react-bootstrap";
-import { useState, useEffect } from "react";
-import { getBase644, beforeUpload4 } from "../../utils/index";
+import { Modal, Button, Form } from "react-bootstrap";
 import UsePostPublic from "../../UseForm/UsePostPublic";
 import UseHome from "../../UseForm/UseHome";
-import axios from "axios";
 
 const Publicacion = () => {
   const { usuario } = UseHome();

@@ -11,7 +11,6 @@ const CardHome = ({ card, i }) => {
     admin,
     usuario,
     settings,
-    comentario,
     cardSelect,
     identBusqueda,
     identificador,
@@ -26,8 +25,6 @@ const CardHome = ({ card, i }) => {
     setIdentComentario,
     setIdentificadorBusqueda,
   } = UseHome();
-  //UseStates de modal
-  const token = localStorage.getItem("token");
 
   //If de filtros de busqueda
   if (identBusqueda.length !== 0) {

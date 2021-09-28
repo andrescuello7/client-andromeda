@@ -1,6 +1,6 @@
-import { Form, Button, Col } from "react-bootstrap";
+import { Form, Button } from "react-bootstrap";
 import axios from "axios";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import UsePasword from "../../UseForm/UsePasword";
 
 const Register = () => {

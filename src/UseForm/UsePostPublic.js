@@ -15,7 +15,6 @@ const UsePostPublic = () => {
     const [ flyer, setFlyer] = useState("")
     const token = localStorage.getItem("token");
     const [base64, setBase64] = useState("");
-    const [ file, setFile ] = useState(null)
     const [input, setInput] = useState({});
 
   //Codigo de imagenes
@@ -25,7 +24,6 @@ const UsePostPublic = () => {
     const changedInput = { ...input, flyer: flyer };
     setInput(changedInput);
     setBase64(base64img);
-    setFile(pic)
     
     const formData = new FormData()
     formData.append('file', pic)
