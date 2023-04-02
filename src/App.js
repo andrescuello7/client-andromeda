@@ -16,7 +16,7 @@ import ProvinciaBuscada from "./pages/ProvinciaBuscada/ProvinciaBuscada";
 //Componentes
 import Navbar from "./components/Navbar/Navbar";
 import Footer from "./components/Footer/FooterBasico";
-axios.defaults.baseURL = "https://server-andromeda.herokuapp.com/api/";
+axios.defaults.baseURL = "https://server-andromeda-production.up.railway.app/api/";
 
 function App() {
   return (
